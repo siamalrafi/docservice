@@ -1,6 +1,6 @@
 import React from 'react';
-import Banner from '../Pages/Home/Banner/Banner';
-import InfoCards from './Home/InfoCards/InfoCards'
+import Banner from './Banner/Banner';
+import InfoCards from './InfoCards/InfoCards'
 
 
 const Home = () => {

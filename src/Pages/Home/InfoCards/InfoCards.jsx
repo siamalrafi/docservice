@@ -17,14 +17,14 @@ const InfoCards = () => {
         {
             id: 2,
             name: 'Our Locations',
-            description: 'Level-4, 34, Banani, Dhaka, Bangladesh',
+            description: 'Level-4, 34, Bananas, Dhaka, Bangladesh',
             icon: marker,
             bgClass: 'bg-accent'
         },
         {
             id: 3,
             name: 'Contact Us',
-            description: '+8801000111223 Available : Sat - Thu, 10:00 AM to 7:00 PM)' ,
+            description: '+8801000111223 Available : Sat - Thu, 10:00 AM to 7:00 PM)',
             icon: phone,
             bgClass: 'bg-gradient-to-r from-primary to-secondary'
         },

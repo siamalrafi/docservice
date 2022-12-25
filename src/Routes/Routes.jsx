@@ -1,4 +1,5 @@
-import Home from "../Pages/Home";
+import Home from "../Pages/Home/Home";
+
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -7,10 +8,10 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             }
         ]
     }
