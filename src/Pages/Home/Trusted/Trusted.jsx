@@ -6,9 +6,7 @@ import trust3 from '../../../../src/assets/trusted/russwho.png';
 import trust4 from '../../../../src/assets/trusted/usaid.png';
 import trust5 from '../../../../src/assets/trusted/WHO.png';
 
-
-const Trusted = () => {
-
+const Trusted = () => { 
     const trustedProve = [trust1, trust2, trust4, trust3, trust5, trust]
 
     return (
