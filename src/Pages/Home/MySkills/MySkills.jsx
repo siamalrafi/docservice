@@ -1,20 +1,31 @@
 import React from 'react';
 import Skill1 from './Skill1';
-import Skill from './Skill1';
 import Skill2 from './Skill2';
 
 const MySkills = () => {
 
-    const mySkills = [
+    const mySkills1 = [
         {
-            name: 'my-skill',
-            institute: 'mmbs',
-            duration: '3000-present',
+            name: 'Medical Officer',
+            institute: 'Maulana Azad Medical College',
+            duration: '2020-present',
         },
         {
-            name: 'my-skill',
-            institute: 'mmbs',
-            duration: '3000-present',
+            name: 'Consultant',
+            institute: 'Kasturba medical college',
+            duration: '2008-2010',
+        }
+    ];
+    const mySkills2 = [
+        {
+            name: 'Head of Medical',
+            institute: 'Madras Medical College',
+            duration: '2006-2010',
+        },
+        {
+            name: 'Physiologist',
+            institute: 'Grant Medical College',
+            duration: '2009-2011',
         }
     ];
 
@@ -28,24 +39,21 @@ const MySkills = () => {
             </div>
 
             <div className='flex mt-10 gap-5 px-8 justify-center'>
-
                 <div>
                     <div>
-                        {mySkills?.map(mySkill => <Skill1></Skill1>)
+                        {mySkills1?.map(mySkill => <Skill1></Skill1>)
                         }
                     </div>
                 </div>
+
+
                 <div>
                     <div>
-                        {mySkills?.map(mySkill => <Skill2></Skill2>)
+                        {mySkills2?.map(mySkill => <Skill2></Skill2>)
                         }
                     </div>
                 </div>
             </div>
-
-
-
-
 
         </div >
     );
