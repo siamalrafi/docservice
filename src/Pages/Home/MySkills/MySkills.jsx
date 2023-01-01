@@ -34,7 +34,7 @@ const MySkills = () => {
     return (
         <div>
             <div className='text-center mt-16 lg:mx-40 mx-10'>
-                <h1 className='text-3xl text-black font-bold mb-5'>My Skills and Experience.</h1>
+                <h1 className='text-3xl text-indigo-500  font-bold mb-5'>My Skills and Experience.</h1>
                 <p>A large part of being a doctor involves problem-solving and thinking critically to find solutions for your patients. Doctors use these skills to assess symptoms, diagnose conditions and develop a treatment regimen for those in their care</p>
             </div>
 
@@ -45,13 +45,13 @@ const MySkills = () => {
 
                     <div>
                         {
-                            mySkills1?.map((mySkill) => <Skill1 mySkill={mySkill}></Skill1>)
+                            mySkills1?.map((mySkill,i) => <Skill1 key={i} mySkill={mySkill}></Skill1>)
                         }
                     </div>
 
                     <div>
                         {
-                            mySkills2?.map((mySkill) => <Skill2 mySkill={mySkill}></Skill2>)
+                            mySkills2?.map((mySkill,i) => <Skill2 key={i} mySkill={mySkill}></Skill2>)
                         }
                     </div>
                 </div>

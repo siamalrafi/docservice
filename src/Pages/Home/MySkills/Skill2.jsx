@@ -5,18 +5,16 @@ const Skill2 = ({ mySkill }) => {
 
     return (
         <div>
-             <div className='flex flex-row-reverse justify-between' >
-                <div>
-                    <h1>{name}</h1>
+            <div className='my-5 flex flex-row-reverse justify-items-center justify-between' >
+                <div className='px-5'>
+                    <h1 className='text-black font-semibold'>{name}</h1>
                     <p>{institute}</p>
-                    <p>{duration}</p>
+                    <p className='text-gray-900'>{duration}</p>
 
                 </div>
-                <div>
-                    <div className="avatar">
-                        <div className="w-24 mask mask-hexagon">
-                            <img src="https://placeimg.com/192/192/people" />
-                        </div>
+                <div className="avatar">
+                    <div className="w-20 rounded  ">
+                        <img src="https://placeimg.com/192/192/people" />
                     </div>
                 </div>
             </div>
