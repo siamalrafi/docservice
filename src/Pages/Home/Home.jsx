@@ -4,7 +4,6 @@ import InfoCards from './InfoCards/InfoCards'
 import Trusted from './Trusted/Trusted';
 import MySkills from './MySkills/MySkills';
 
-
 const Home = () => {
     return (
         <div>
@@ -12,6 +11,12 @@ const Home = () => {
             <Trusted></Trusted>
             <InfoCards></InfoCards>
             <MySkills></MySkills>
+
+
+
+
+
+
 
         </div>
     );
