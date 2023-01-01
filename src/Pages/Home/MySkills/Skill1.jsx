@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Skill1 = ({ mySkill }) => {
-    const { name, institute, duration } = mySkill;
+    const { name, institute, duration, img } = mySkill;
 
     return (
         <div>
@@ -14,7 +14,7 @@ const Skill1 = ({ mySkill }) => {
                 <div>
                     <div className="avatar">
                         <div className="w-20 rounded  ">
-                            <img src="https://placeimg.com/192/192/people" />
+                            <img src={img} alt='img' />
                         </div>
                     </div>
                 </div>
