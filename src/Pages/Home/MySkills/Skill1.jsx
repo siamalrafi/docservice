@@ -1,12 +1,16 @@
 import React from 'react';
 
-const Skill1 = () => {
+const Skill1 = ({ mySkill }) => {
+    const { name, institute, duration } = mySkill;
+
     return (
         <div>
 
-            <div className='flex'>
+            <div className='flex justify-between' >
                 <div>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae!.</h1>
+                    <h1>{name}</h1>
+                    <p>{institute}</p>
+                    <p>{duration}</p>
                 </div>
                 <div>
                     <div className="avatar">
@@ -15,7 +19,7 @@ const Skill1 = () => {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     );
 };

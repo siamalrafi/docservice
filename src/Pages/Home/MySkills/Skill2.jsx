@@ -1,11 +1,16 @@
 import React from 'react';
 
-const Skill2 = () => {
+const Skill2 = ({ mySkill }) => {
+    const { name, institute, duration } = mySkill;
+
     return (
         <div>
-            <div className='lg:flex lg:flex-row-reverse md:flex md:flex-row-reverse'>
+             <div className='flex flex-row-reverse justify-between' >
                 <div>
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quae!.</h1>
+                    <h1>{name}</h1>
+                    <p>{institute}</p>
+                    <p>{duration}</p>
+
                 </div>
                 <div>
                     <div className="avatar">

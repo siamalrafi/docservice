@@ -38,22 +38,51 @@ const MySkills = () => {
                 <p>A large part of being a doctor involves problem-solving and thinking critically to find solutions for your patients. Doctors use these skills to assess symptoms, diagnose conditions and develop a treatment regimen for those in their care</p>
             </div>
 
-            <div className='flex mt-10 gap-5 px-8 justify-center'>
-                <div>
+            <div>
+
+
+
+
+
+
+
+
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 justify-items-center px-16'>
+
+
                     <div>
-                        {mySkills1?.map(mySkill => <Skill1></Skill1>)
+                        {/*   <div className="card bg-base-100 shadow-xl">
+                            <div className="card-body">
+                                <h2 className="card-title">Card title!</h2>
+                                <p>If a dog chews shoes whose shoes does he choose?</p>
+                                <div className="card-actions justify-end">
+                                    <button className="btn btn-primary">Buy Now</button>
+                                </div>
+                            </div>
+                        </div> */}
+
+                        {
+                            mySkills1?.map((mySkill) => <Skill1 mySkill={mySkill}></Skill1>)
                         }
+                    </div>
+
+                    <div>
+                        {/* 
+                        */}
+                        {
+                            mySkills2?.map((mySkill) => <Skill2 mySkill={mySkill}></Skill2>)
+                        }
+
                     </div>
                 </div>
 
 
-                <div>
-                    <div>
-                        {mySkills2?.map(mySkill => <Skill2></Skill2>)
-                        }
-                    </div>
-                </div>
+
+
+
+
             </div>
+
 
         </div >
     );
