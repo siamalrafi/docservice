@@ -5,6 +5,7 @@ import Trusted from './Trusted/Trusted';
 import MySkills from './MySkills/MySkills';
 import Treatment from './Treatment/Treatment';
 import Services from './Services/Services';
+import Exceptional from './Exceptional/Exceptional';
 
 const Home = () => {
     return (
@@ -15,7 +16,7 @@ const Home = () => {
             <MySkills></MySkills>
             <Treatment></Treatment>
             <Services></Services>
-
+            <Exceptional></Exceptional>
 
 
 
