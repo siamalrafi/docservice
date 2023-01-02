@@ -4,6 +4,7 @@ import InfoCards from './InfoCards/InfoCards'
 import Trusted from './Trusted/Trusted';
 import MySkills from './MySkills/MySkills';
 import Treatment from './Treatment/Treatment';
+import Services from './Services/Services';
 
 const Home = () => {
     return (
@@ -13,7 +14,7 @@ const Home = () => {
             <InfoCards></InfoCards>
             <MySkills></MySkills>
             <Treatment></Treatment>
-
+            <Services></Services>
 
 
 
