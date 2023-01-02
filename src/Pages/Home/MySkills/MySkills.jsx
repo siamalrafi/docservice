@@ -43,14 +43,14 @@ const MySkills = () => {
 
     return (
         <div>
-            <div className='text-center mt-16 lg:mx-40 mx-10'>
-                <h1 className='text-3xl text-indigo-500  font-bold mb-5'>My Skills and Experience.</h1>
+            <div className='text-center mt-14 lg:mx-40 mx-10'>
+                <h1 className='text-3xl text-indigo-500 font-bold mb-3'>My Skills and Experience.</h1>
                 <p>A large part of being a doctor involves problem-solving and thinking critically to find solutions for your patients. Doctors use these skills to assess symptoms, diagnose conditions and develop a treatment regimen for those in their care</p>
             </div>
 
 
             <div>
-                <div className='mt-10 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 justify-items-center lg:mx-40'>
+                <div className='mt-10 grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 justify-items-center lg:mx-40 md:mx-30'>
 
                     <div>
                         {

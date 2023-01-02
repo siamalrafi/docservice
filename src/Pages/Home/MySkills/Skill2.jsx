@@ -13,7 +13,7 @@ const Skill2 = ({ mySkill }) => {
 
                 </div>
                 <div className="avatar">
-                    <div className="w-20 rounded  ">
+                    <div className="w-24 rounded  ">
                         <img src={img} alt='img' />
                     </div>
                 </div>
