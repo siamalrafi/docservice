@@ -12,7 +12,7 @@ const Services = () => {
     const services = [
         {
             name: 'Medical',
-            description: 'The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor..',
+            description: 'The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor.',
             img: Medical
         },
         {
@@ -22,11 +22,11 @@ const Services = () => {
         },
         {
             name: 'Physiologist',
-            description: 'Physiologists are highly trained medical scientists with a master degree or doctoral degree.With zeal and expertise in studying how humans',
+            description: 'Physiologists are highly trained medical scientists with a master degree or doctoral degree.With zeal and expertise in studying how humans.',
             img: Physiologist
         },
         {
-            name: 'Surgical ', description: 'The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment',
+            name: 'Surgical ', description: 'The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment.',
             img: img1
         },
         {
@@ -39,16 +39,16 @@ const Services = () => {
         },
     ];
 
-    
+
     return (
         <div>
             <div>
-                <h1 className='text-center text-indigo-500 font-sans'>OUR SERVICES</h1>
+                <h1 className='text-center text-indigo-500 font-semibold'>OUR SERVICES</h1>
                 <h1 className='text-3xl text-center text-indigo-500 font-bold mb-3'>
                     Services We Provide.</h1>
             </div>
 
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-3 px-5'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-2 px-5'>
                 {
                     services.map((service) =>
                         <div className='grid justify-items-start  hover:scale-125 transition duration-500 ease-in-out'>
