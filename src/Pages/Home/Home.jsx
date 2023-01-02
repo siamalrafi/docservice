@@ -6,6 +6,7 @@ import MySkills from './MySkills/MySkills';
 import Treatment from './Treatment/Treatment';
 import Services from './Services/Services';
 import Exceptional from './Exceptional/Exceptional';
+import MakeAppointment from './MakeAppointment/MakeAppointment';
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
             <Treatment></Treatment>
             <Services></Services>
             <Exceptional></Exceptional>
-
+            <MakeAppointment></MakeAppointment>
 
 
 

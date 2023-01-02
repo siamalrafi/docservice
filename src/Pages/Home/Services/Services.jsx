@@ -30,13 +30,14 @@ const Services = () => {
             img: img1
         },
         {
-            name: 'Therapist', description: 'A therapist is a licensed counselor or psychologist who can use talk therapy to help you treat mental health symptoms and improve how you manage stress and relationships.',
-            img: img2
-        },
-        {
             name: 'Psychiatrist ', description: 'A psychiatrist is a physician who specializes in psychiatry, the branch of medicine devoted to the diagnosis, prevention, study, and treatment of mental disorders.',
             img: img3
         },
+        {
+            name: 'Therapist', description: 'A therapist is a licensed counselor or psychologist who can use talk therapy to help you treat mental health symptoms and improve how you manage stress and relationships.',
+            img: img2
+        },
+
     ];
 
 
