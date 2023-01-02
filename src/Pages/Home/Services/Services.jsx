@@ -38,10 +38,10 @@ const Services = () => {
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-3 px-5'>
                 {
                     services.map((service) =>
-                        <div className='grid justify-items-start  hover:scale-125 '>
+                        <div className='grid justify-items-start  hover:scale-125 transition duration-300 ease-in-out'>
                             <figure className="px-10 pt-10">
                                 <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
-                            </figure> 
+                            </figure>
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">{service.name}</h2>
                                 <p>{service.description}</p>
