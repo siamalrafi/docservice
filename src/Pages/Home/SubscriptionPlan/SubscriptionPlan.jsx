@@ -3,10 +3,11 @@ import React from 'react';
 const SubscriptionPlan = () => {
     return (
         <div>
-            <section className="py-6 dark:bg-gray-800 dark:text-gray-100">
+            <section className="py-6 bg-gradient-to-r from-indigo-400  to-pink-500 dark:text-gray-300">
                 <div className="container p-4 mx-auto sm:p-10">
                     <div className="mb-12 space-y-4 text-center">
-                        <h1 className="text-4xl font-semibold leading-tight">Pricing</h1>
+                        <h1 className="text-4xl font-semibold leading-tight">DocService Health Care & Protection Plans
+                        </h1>
                         <p className="px-4 sm:px-8 lg:px-24">Sunt suscipit eaque qui iure unde labore numquam iusto alias explicabo, pariatur ipsam, cupiditate aliquid modi?</p>
                         <div>
                             <button className="px-4 py-1 font-semibold border rounded-l-lg dark:bg-violet-400 dark:border-violet-400 dark:text-gray-900">Monthly</button>
