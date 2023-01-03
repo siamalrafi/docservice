@@ -1,11 +1,7 @@
 import React from 'react';
 
-const Contact = () => {
-
-
-
-
-
+const Contact = () => { 
+    
     return (
         <div>
             <section className="overflow-hidden bg-white px-10">

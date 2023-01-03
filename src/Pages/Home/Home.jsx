@@ -9,6 +9,7 @@ import Exceptional from './Exceptional/Exceptional';
 import MakeAppointment from './MakeAppointment/MakeAppointment';
 import Testimonial from './Testimonial/Testimonial';
 import Contact from './Contact/Contact';
+import SubscriptionPlan from './SubscriptionPlan/SubscriptionPlan';
 
 const Home = () => {
     return (
@@ -22,14 +23,8 @@ const Home = () => {
             <Exceptional></Exceptional>
             <MakeAppointment></MakeAppointment>
             <Testimonial></Testimonial>
+            <SubscriptionPlan></SubscriptionPlan>
             <Contact></Contact>
-
-
-
-
-
-
-
 
 
 

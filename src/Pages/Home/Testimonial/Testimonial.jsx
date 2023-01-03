@@ -1,4 +1,5 @@
 import React from 'react';
+import Slider from 'react-slick';
 import quote from '../../../assets/icons/quote.svg';
 import people1 from '../../../assets/images/people1.png';
 import people2 from '../../../assets/images/people2.png';
@@ -31,7 +32,14 @@ const Testimonial = () => {
             location: 'California'
         },
     ]
-
+    const settings = {
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        speed: 500
+    };
     return (
         <section className='my-16'>
             <div className='flex justify-between'>
@@ -43,6 +51,8 @@ const Testimonial = () => {
                     <img className='w-20 lg:w-48' src={quote} alt="" />
                 </figure>
             </div>
+
+
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     reviews.map(review => <Review
@@ -52,7 +62,9 @@ const Testimonial = () => {
                     </Review>)
                 }
             </div>
-        </section>
+
+
+        </section >
     );
 };
 
