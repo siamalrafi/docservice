@@ -6,7 +6,7 @@ const SubscriptionPlan = () => {
             <section className="py-6 bg-gradient-to-r from-indigo-400  to-pink-500 dark:text-gray-300">
                 <div className="container p-4 mx-auto sm:p-10">
                     <div className="mb-12 space-y-4 text-center">
-                        <h1 className="text-4xl font-semibold leading-tight">DocService Health Care & Protection Plans
+                        <h1 className="text-4xl font-semibold leading-tight textbl">DocService Health Care & Protection Plans
                         </h1>
                         <p className="px-4 sm:px-8 lg:px-24">Sunt suscipit eaque qui iure unde labore numquam iusto alias explicabo, pariatur ipsam, cupiditate aliquid modi?</p>
                         <div>
@@ -14,15 +14,17 @@ const SubscriptionPlan = () => {
                             <button className="px-4 py-1 border rounded-r-lg dark:border-violet-400">Annually</button>
                         </div>
                     </div>
-                    <div className="grid max-w-md grid-cols-1 gap-6 mx-auto auto-rows-fr lg:grid-cols-3 lg:max-w-full">
-                        <div className="flex flex-col overflow-hidden border-2 rounded-md dark:border-gray-700">
-                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-800">
+
+                    <div className="grid max-w-md grid-cols-1 gap-9 mx-auto auto-rows-fr lg:grid-cols-3 lg:max-w-full">
+                  
+                        <div className="flex flex-col overflow-hidden border-2 rounded-md transition-all duration-500 transform hover:-translate-y-6 -translate-y-2 scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-600">
                                 <p className="text-lg font-medium">Personal</p>
-                                <p className="text-5xl font-bold">0€
+                                <p className="text-5xl font-bold">0$
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-900">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
@@ -43,17 +45,20 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Sign up</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
                             </div>
                         </div>
-                        <div className="flex flex-col overflow-hidden border-2 rounded-md dark:border-violet-400">
-                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-800">
+
+
+
+                        <div className="flex flex-col overflow-hidden border-4 rounded-md border-green-300 transition-all duration-500 transform hover:-translate-y-6 -translate-y-2 scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-600">
                                 <p className="text-lg font-medium">Professional</p>
-                                <p className="text-5xl font-bold">8€
+                                <p className="text-5xl font-bold">8$
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-900">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
@@ -74,17 +79,23 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Sign up</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
                             </div>
                         </div>
-                        <div className="flex flex-col overflow-hidden border-2 rounded-md dark:border-gray-700">
-                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-800">
+
+
+
+
+
+
+                        <div className="flex flex-col overflow-hidden border-2 rounded-md transition-all duration-500 transform hover:-translate-y-6 -translate-y-2 scale-105 shadow-xl hover:shadow-2xl cursor-pointer ">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-600">
                                 <p className="text-lg font-medium">Enterprise</p>
-                                <p className="text-5xl font-bold">19€
+                                <p className="text-5xl font-bold">19$
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-900">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
@@ -105,7 +116,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Sign up</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
                             </div>
                         </div>
                     </div>
