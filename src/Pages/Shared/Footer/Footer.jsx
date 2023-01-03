@@ -34,18 +34,19 @@ const Footer = () => {
                         <Link className="link link-hover">Privacy policy</Link>
                         <Link className="link link-hover">Cookie policy</Link>
                     </div>
-                    <div className="text-center">
-                        <h3 className="text-2xl font-bold mb-3"> Download our fitness app </h3>
-                        <p className='text-1xl '> Stay fit. All day, every day. </p>
+                    <div className="text-center ">
+                        <h3 className="text-2xl font-bold mb-2 "> Download our app </h3>
+                        <p className='text-2xl'> Stay fit. All day, every day. </p>
                         <div className="flex justify-center my-5">
-                            <div className="bg-gray-700 flex items-center border w-auto rounded-lg px-4 py-2 w-52 mx-2">
-                                <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" className="w-7 md:w-8" />
+                            <div className="bg-gray-700 flex items-center border rounded-lg px-4 py-2 w-52 mx-2">
+                                <img src="https://cdn-icons-png.flaticon.com/512/888/888857.png" alt='google play' className="w-7 md:w-8" />
+
                                 <div className="text-left ml-3">
                                     <p className="  text-white">Download on </p>
                                     <p className="  text-white"> Google Play Store </p>
                                 </div>
                             </div>
-                            <div className="flex bg-gray-700 items-center border w-auto rounded-lg px-4 py-2 w-44 mx-2">
+                            <div className="flex bg-gray-700 items-center border rounded-lg px-4 py-2 w-44 mx-2">
                                 <FontAwesomeIcon className='text-4xl text-white' icon={faAppleWhole}></FontAwesomeIcon>
 
                                 <div className="text-left ml-3">

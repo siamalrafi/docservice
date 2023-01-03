@@ -51,7 +51,7 @@ const Services = () => {
 
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-2 px-5'>
                 {
-                    services.map((service,i) =>
+                    services.map((service, i) =>
                         <div key={i} className='grid justify-items-start  hover:scale-125 transition duration-500 ease-in-out'>
                             <figure className="px-10 pt-10">
                                 <img src={service.img} alt="Shoes" className="rounded-xl" />

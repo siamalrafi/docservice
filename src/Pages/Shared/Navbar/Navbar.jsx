@@ -8,13 +8,12 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>About</Link></li>
         <li><Link to='/'>Blogs</Link></li>
-
         <li><Link to='/'>Dashboard</Link></li>
-        {/* 
-        <li><Link >Log Out</Link></li>
 
-        <li><Link to='/'>SignUp</Link></li>
-        <li><Link to='/'>Login</Link></li> */}
+        {/* <li><Link >Log Out</Link></li> */}
+
+        <li><Link to='/SignUp'>SignUp</Link></li>
+        <li><Link to='/login'>Login</Link></li>
 
         <div className="form-control mt-2">
             <label className="label cursor-pointer">
