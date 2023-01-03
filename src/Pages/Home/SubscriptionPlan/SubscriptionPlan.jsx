@@ -1,4 +1,6 @@
 import React from 'react';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 
 const SubscriptionPlan = () => {
     return (
@@ -6,7 +8,7 @@ const SubscriptionPlan = () => {
             <section className="py-6 bg-gradient-to-r from-indigo-400  to-pink-500 dark:text-gray-300">
                 <div className="container p-4 mx-auto sm:p-10">
                     <div className="mb-12 space-y-4 text-center">
-                        <h1 className="text-4xl font-semibold leading-tight textbl">DocService Health Care & Protection Plans
+                        <h1 className="text-4xl font-bold leading-tight  text-black">DocService Health Care & Protection Plans
                         </h1>
                         <p className="px-4 sm:px-8 lg:px-24">Sunt suscipit eaque qui iure unde labore numquam iusto alias explicabo, pariatur ipsam, cupiditate aliquid modi?</p>
                         <div>
@@ -16,7 +18,7 @@ const SubscriptionPlan = () => {
                     </div>
 
                     <div className="grid max-w-md grid-cols-1 gap-9 mx-auto auto-rows-fr lg:grid-cols-3 lg:max-w-full">
-                  
+
                         <div className="flex flex-col overflow-hidden border-2 rounded-md transition-all duration-500 transform hover:-translate-y-6 -translate-y-2 scale-105 shadow-xl hover:shadow-2xl cursor-pointer">
                             <div className="flex flex-col items-center justify-center px-2 py-8 space-y-4 dark:bg-gray-600">
                                 <p className="text-lg font-medium">Personal</p>
@@ -45,7 +47,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
                             </div>
                         </div>
 
@@ -79,7 +81,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
                             </div>
                         </div>
 
@@ -116,7 +118,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
                             </div>
                         </div>
                     </div>

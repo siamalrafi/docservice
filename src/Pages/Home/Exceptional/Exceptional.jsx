@@ -6,7 +6,7 @@ const Exceptional = () => {
     return (
         <div>
             <div className='text-center'>
-                <h1 className='text-3xl text-indigo-500 font-bold mt-5'>Exceptional Service Care.</h1>
+                <h1 className='text-3xl text-indigo-500 font-bold mt-5 mb-2'>Exceptional Service Care.</h1>
                 <p>Exceptional Services only for Special Person.</p>
             </div>
 
