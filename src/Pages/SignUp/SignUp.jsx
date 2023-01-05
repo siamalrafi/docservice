@@ -1,9 +1,26 @@
 import React from 'react';
 import Google from '../../assets/icons/google.svg';
 import Facebook from '../../assets/icons/facebook.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SignUp = () => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const FirstName = form.firstName.value;
+        const LastName = form.lastName.value;
+        const FullName = `${FirstName + ' ' + LastName}`;
+        const email = form.email.value;
+        
+        console.log('object', FullName, email);
+
+    }
+
+
+
+
+
     return (
         <div className="mx-auto max-w-6xl px-12">
             <div className="flex flex-col md:flex-row justify-center">
@@ -13,22 +30,32 @@ const SignUp = () => {
                 </div>
                 <div className="md:w-1/2 flex justify-start md:justify-end w-full ">
                     <div className="shadow-md flex-auto max-w-sm p-10 pb-20">
-                        <div className="w-full">
-                            <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> First Name</div>
-                            <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input placeholder="Jhon" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" /></div>
-                        </div>
-                        <div className="w-full">
-                            <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Last Name</div>
-                            <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input placeholder="Doe" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" /></div>
-                        </div>
-                        <div className="w-full">
-                            <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Email</div>
-                            <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input placeholder="jhon@doe.com" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" /></div>
-                        </div>
-                        <div className="mt-6 relative">
-                            <div className="shadow-md font-medium py-2 px-4 text-green-100
-                  cursor-pointer bg-teal-600 rounded text-lg tr-mt  absolute text-center w-full">Submit</div>
-                        </div>
+
+                        <form onSubmit={handleSubmit}>
+
+                            <div className="w-full">
+                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> First Name</div>
+                                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
+                                    <input name='firstName' placeholder="Jhon" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required /></div>
+                            </div>
+                            <div className="w-full">
+                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Last Name</div>
+                                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
+                                    <input name='lastName' placeholder="Doe" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required /></div>
+                            </div>
+                            <div className="w-full">
+                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Email</div>
+                                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
+                                    <input name='email' type="email" placeholder="jhon@doe.com" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required />
+                                </div>
+                            </div>
+
+                            <div className="mt-6 relative">
+                                <button type="submit" className="shadow-md font-medium py-2 px-4 text-green-100
+                  cursor-pointer bg-purple-500 rounded text-lg tr-mt  absolute text-center w-full" >Submit</button>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
