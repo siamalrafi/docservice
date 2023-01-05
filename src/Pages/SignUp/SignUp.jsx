@@ -20,22 +20,19 @@ const SignUp = () => {
         createUser(email, password)
             .then((result) => {
                 const user = result.user;
-                toast.success(`${name},Successfully Sign In.`);
+                // toast.success(`${name},Successfully Sign In.`);
                 nameUpdate(name)
                     .then(() => {
-                        toast.success('Profile Name updated!');
-
+                        // toast.success('Profile Name updated!');
                         varifyEmail()
                             .then(() => {
-                                toast.success('Email verification sent!');
+                                toast.success(`${name}, Email verification sent!`);
                             });
 
                     })
                     .catch((error) => {
                         toast.error(error.message)
                     });
-
-                // ...
                 console.log(user);
             })
             .catch((error) => console.error(error));
@@ -50,7 +47,6 @@ const SignUp = () => {
                 console.log(user);
             })
             .catch((error) => console.error(error.message))
-
     }
 
 
@@ -90,7 +86,7 @@ const SignUp = () => {
 
                             <div className="mt-6 relative">
                                 <button type="submit" className="shadow-md font-medium py-2 px-4 text-green-100
-                  cursor-pointer bg-purple-500 rounded text-lg tr-mt  absolute text-center w-full" >Submit</button>
+                  cursor-pointer bg-purple-500 rounded text-lg tr-mt  absolute text-center w-full" >Sign Up</button>
                             </div>
 
                         </form>

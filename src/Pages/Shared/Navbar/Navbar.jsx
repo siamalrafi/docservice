@@ -16,13 +16,13 @@ const Navbar = () => {
         {
             user?.email ?
                 <>
-                    <li><Link >Log Out</Link></li>
+                    <li><Link onClick={logOut}>Log Out</Link></li>
                     <div className="avatar">
                         <div className="w-10 mx-5 rounded-full">
-                            <img src="https://placeimg.com/192/192/people" />
+                            <img alt='user name' title={user.displayName} src="https://placeimg.com/192/192/people" />
                         </div>
                     </div>
-                    </>
+                </>
                 :
                 <>
                     <li><Link to='/SignUp'>SignUp</Link></li>
