@@ -1,19 +1,46 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Google from '../../assets/icons/google.svg';
 import Facebook from '../../assets/icons/facebook.svg';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../Context/UserContext';
+
 
 const SignUp = () => {
+    const { createUser, nameUpdate, varifyEmail, googleSignIn, } = useContext(AuthContext);
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const form = event.target;
-        const FirstName = form.firstName.value;
-        const LastName = form.lastName.value;
-        const FullName = `${FirstName + ' ' + LastName}`;
+        const name = form.name.value;
         const email = form.email.value;
-        
-        console.log('object', FullName, email);
+        const password = form.password.value;
+        console.log('object', password, password);
+
+        createUser(email, password)
+            .then((result) => {
+                // updateProfile
+                const user = result.user;
+                toast.success(`${name},Successfully Sign In.`);
+                nameUpdate(name)
+                    .then(() => {
+                        toast.success('Profile Name updated!');
+
+                        varifyEmail()
+                            .then(() => {
+                                toast.success('Email verification sent!');
+                            });
+
+                    })
+                    .catch((error) => {
+                        toast.error(error.message)
+                    });
+
+                // ...
+                console.log(user);
+            })
+            .catch((error) => console.error(error));
 
     }
 
@@ -34,19 +61,21 @@ const SignUp = () => {
                         <form onSubmit={handleSubmit}>
 
                             <div className="w-full">
-                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> First Name</div>
+                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span>  Name</div>
                                 <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
-                                    <input name='firstName' placeholder="Jhon" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required /></div>
+                                    <input name='name' placeholder="Jhon Bobi" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required /></div>
                             </div>
-                            <div className="w-full">
-                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Last Name</div>
-                                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
-                                    <input name='lastName' placeholder="Doe" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required /></div>
-                            </div>
+
                             <div className="w-full">
                                 <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Email</div>
                                 <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
                                     <input name='email' type="email" placeholder="jhon@doe.com" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required />
+                                </div>
+                            </div>
+                            <div className="w-full">
+                                <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Password</div>
+                                <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">
+                                    <input name='password' type="password" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" required />
                                 </div>
                             </div>
 
