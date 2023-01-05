@@ -16,11 +16,9 @@ const SignUp = () => {
         const name = form.name.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log('object', password, password);
 
         createUser(email, password)
             .then((result) => {
-                // updateProfile
                 const user = result.user;
                 toast.success(`${name},Successfully Sign In.`);
                 nameUpdate(name)
@@ -41,6 +39,17 @@ const SignUp = () => {
                 console.log(user);
             })
             .catch((error) => console.error(error));
+
+    };
+
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch((error) => console.error(error.message))
 
     }
 
@@ -90,18 +99,18 @@ const SignUp = () => {
             </div>
 
 
-            <div className='flex justify-center my-5 gap-5 justify-items-center'>
-                <button className=' '>
+            <div className='flex justify-center my-5 gap-10 justify-items-center'>
+                <button onClick={handleGoogleSignIn}>
                     <span>
                         <img src={Google} alt="Google" />
                     </span>
-                    Google
+                    <span className='font-bold'>Google</span>
                 </button>
                 <button>
                     <span>
                         <img src={Facebook} className="h-14 w-14" alt="Facebook" />
                     </span>
-                    FaceBook
+                    <span className='font-bold'> FaceBook </span>
                 </button>
             </div>
         </div>

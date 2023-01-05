@@ -1,8 +1,11 @@
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-
-import React from 'react';
+import { AuthContext } from '../../../Context/UserContext';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user);
+
 
     const manuItems = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
@@ -10,10 +13,23 @@ const Navbar = () => {
         <li><Link to='/'>Blogs</Link></li>
         <li><Link to='/'>Dashboard</Link></li>
 
-        {/* <li><Link >Log Out</Link></li> */}
+        {
+            user?.email ?
+                <>
+                    <li><Link >Log Out</Link></li>
+                    <div className="avatar">
+                        <div className="w-10 mx-5 rounded-full">
+                            <img src="https://placeimg.com/192/192/people" />
+                        </div>
+                    </div>
+                    </>
+                :
+                <>
+                    <li><Link to='/SignUp'>SignUp</Link></li>
+                    <li><Link to='/login'>Login</Link></li>
+                </>
+        }
 
-        <li><Link to='/SignUp'>SignUp</Link></li>
-        <li><Link to='/login'>Login</Link></li>
 
         <div className="form-control mt-2">
             <label className="label cursor-pointer">
