@@ -5,6 +5,7 @@ import Physiologist from '../../../assets/skills/Physiologist.png';
 import img1 from '../../../assets/skills/img1.png';
 import img2 from '../../../assets/skills/img2.png';
 import img3 from '../../../assets/skills/img3.png';
+import { Link } from 'react-router-dom';
 
 
 const Services = () => {
@@ -52,15 +53,17 @@ const Services = () => {
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-2 px-5'>
                 {
                     services.map((service, i) =>
-                        <div key={i} className='grid justify-items-start  hover:scale-125 transition duration-500 ease-in-out'>
-                            <figure className="px-10 pt-10">
-                                <img src={service.img} alt="Shoes" className="rounded-xl" />
-                            </figure>
-                            <div className="card-body items-center text-center">
-                                <h2 className="card-title">{service.name}</h2>
-                                <p>{service.description}</p>
+                        <Link to={`/services/${service.name}`}>
+                            <div key={i} className='grid justify-items-start hover:scale-125 transition duration-500 ease-in-out'>
+                                <figure className="px-10 pt-10">
+                                    <img src={service.img} alt="Shoes" className="rounded-xl" />
+                                </figure>
+                                <div className="card-body items-center text-center">
+                                    <h2 className="card-title">{service.name}</h2>
+                                    <p>{service.description}</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
 
                     )
                 }
