@@ -4,23 +4,37 @@ import { AuthContext } from '../../../Context/UserContext';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user);
-
+    console.log(user?.email);
 
     const manuItems = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/'>About</Link></li>
+        <li><Link to='/'>Services</Link></li>
         <li><Link to='/'>Blogs</Link></li>
-        <li><Link to='/'>Dashboard</Link></li>
 
         {
             user?.email ?
                 <>
-                    <li><Link onClick={logOut}>Log Out</Link></li>
-                    <div className="avatar">
-                        <div className="w-10 mx-5 rounded-full">
-                            <img alt='user name' title={user.displayName} src="https://placeimg.com/192/192/people" />
-                        </div>
+        <li><Link to='/'>Dashboard</Link></li>
+
+                    <div className="dropdown dropdown-end">
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                                <img title={user.displayName} src="https://placeimg.com/80/80/people" alt='user-img' />
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 mt-3 p-2">
+                            <li>
+                                <Link>
+                                    Profile
+                                    <span className="badge">New</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link>Settings</Link></li>
+                            <li onClick={logOut}>
+                                <Link>Logout</Link></li>
+                        </ul>
                     </div>
                 </>
                 :
@@ -30,12 +44,13 @@ const Navbar = () => {
                 </>
         }
 
-
         <div className="form-control mt-2">
             <label className="label cursor-pointer">
             </label>
         </div>
-    </React.Fragment>
+    </React.Fragment>;
+
+
     return (
         <div>
             <div className="navbar font-semibold bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-500 flex justify-between">

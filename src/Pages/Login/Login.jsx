@@ -7,9 +7,9 @@ import Facebook from '../../assets/icons/facebook.svg';
 
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || '/'
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -22,10 +22,12 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 toast.success(`successfully logged in`);
-                Navigate(form, { replace: true })
+                // navigate(form, { replace: true })
+                navigate('/')
             })
             .catch((error) => {
-                console.error(error)
+                console.error(error);
+                toast.error(`Error Occurred.}`);
             });
 
     };
