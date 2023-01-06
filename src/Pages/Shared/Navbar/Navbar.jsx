@@ -8,14 +8,14 @@ const Navbar = () => {
 
     const manuItems = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/'>About</Link></li>
-        <li><Link to='/'>Services</Link></li>
-        <li><Link to='/'>Blogs</Link></li>
+        <li><Link to='/about'>About</Link></li>
+        <li><Link to='/services'>Services</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
 
         {
             user?.email ?
                 <>
-        <li><Link to='/'>Dashboard</Link></li>
+        <li><Link to='/dashboard'>Dashboard</Link></li>
 
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
