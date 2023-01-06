@@ -57,8 +57,11 @@ const SignUp = () => {
         <div className="mx-auto max-w-6xl px-12">
             <div className="flex flex-col md:flex-row justify-center">
                 <div className="md:w-1/2 max-w-md flex flex-col justify-center">
-                    <div className="md:text-4xl text-xl font-black uppercase">SignUp</div>
-                    <div className="text-xl mt-4">Develop your workforce and make it a selling machine</div>
+                    <div className="md:text-4xl text-xl font-black uppercase">Sign Up </div>
+                    <div className="text-xl mt-4">Get your best service from DocService.</div>
+             <p className='py-3'>
+                Join thousands of others industry professionals Doctors. Keep up-to-date with the latest mobile news, innovation and technology from around the globe. Don't miss out!
+             </p>
                 </div>
                 <div className="md:w-1/2 flex justify-start md:justify-end w-full ">
                     <div className="shadow-md flex-auto max-w-sm p-10 pb-20">
