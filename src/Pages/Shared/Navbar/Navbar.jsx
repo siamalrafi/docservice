@@ -1,3 +1,5 @@
+import { faGear, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext';
@@ -15,7 +17,7 @@ const Navbar = () => {
         {
             user?.email ?
                 <>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+                    <li><Link to='/dashboard'>Dashboard</Link></li>
 
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
@@ -26,14 +28,21 @@ const Navbar = () => {
                         <ul tabIndex={0} className="shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52 mt-3 p-2">
                             <li>
                                 <Link>
+                                    <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
                                     Profile
                                     <span className="badge">New</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link>Settings</Link></li>
+                                <span>
+                                    <FontAwesomeIcon icon={faGear}></FontAwesomeIcon>
+                                    Settings</span></li>
+
                             <li onClick={logOut}>
-                                <Link>Logout</Link></li>
+
+                                <span>
+                                    <FontAwesomeIcon icon={faRightFromBracket}></FontAwesomeIcon>
+                                    Logout</span></li>
                         </ul>
                     </div>
                 </>
