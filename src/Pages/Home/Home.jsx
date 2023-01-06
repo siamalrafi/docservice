@@ -4,12 +4,12 @@ import InfoCards from './InfoCards/InfoCards'
 import Trusted from './Trusted/Trusted';
 import MySkills from './MySkills/MySkills';
 import Treatment from './Treatment/Treatment';
-import Services from './Services/Services';
 import Exceptional from './Exceptional/Exceptional';
 import MakeAppointment from './MakeAppointment/MakeAppointment';
 import Testimonial from './Testimonial/Testimonial';
 import Contact from './Contact/Contact';
 import SubscriptionPlan from './SubscriptionPlan/SubscriptionPlan';
+import Services from '../Services/Services';
 
 const Home = () => {
     return (

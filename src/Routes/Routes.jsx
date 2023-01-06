@@ -1,13 +1,13 @@
 import Home from "../Pages/Home/Home";
-// import Services from "../Pages/Services/Services";
+import ErrorPage from "../Pages/Extra/ErrorPage/ErrorPage";
 import Blog from '../Pages/Extra/Blog/Blog';
 import Dashboard from '../Pages/Dashboard/Dashboard';
 import PrivateRoutes from './PrivateRoutes';
-import Services from '../Pages/Home/Services/Services';
 import About from "../Pages/Extra/About/About";
 import Login from "../Pages/Auth/Login/Login";
 import SignUp from "../Pages/Auth/SignUp/SignUp";
-import ErrorPage from "../Pages/Extra/ErrorPage/ErrorPage";
+import Services from '../Pages/Services/Services'
+import SingleService from '../Pages/Services/SingleService'
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/Services/:name',
-                element: <Services></Services>
+                element: <SingleService></SingleService>
             },
             {
                 path: '/blogs',

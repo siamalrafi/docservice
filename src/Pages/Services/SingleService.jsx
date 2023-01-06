@@ -1,16 +1,16 @@
 import React from 'react';
-import Medical from '../../../assets/skills/Medical.png';
-import Consultant from '../../../assets/skills/Consultant.png';
-import Physiologist from '../../../assets/skills/Physiologist.png';
-import img1 from '../../../assets/skills/img1.png';
-import img2 from '../../../assets/skills/img2.png';
-import img3 from '../../../assets/skills/img3.png';
+import Medical from '../../assets/skills/Medical.png';
+import Consultant from '../../assets/skills/Consultant.png';
+import Physiologist from '../../assets/skills/Physiologist.png';
+import img1 from '../../assets/skills/img1.png';
+import img2 from '../../assets/skills/img2.png';
+import img3 from '../../assets/skills/img3.png';
 import { Link } from 'react-router-dom';
 
 
 const Services = () => {
 
-    const services = [
+    /* const services = [
         {
             name: 'Medical',
             description: 'The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor.',
@@ -39,41 +39,15 @@ const Services = () => {
             img: img2
         },
 
-    ];
+    ]; */
 
 
     return (
+
         <div>
-            <div className='my-10'>
-                <h1 className='text-center text-indigo-500 font-semibold'>OUR SERVICES</h1>
-                <h1 className='text-3xl text-center text-indigo-500 font-bold mb-3'>
-                    Services We Provide.</h1>
-            </div>
-
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 justify-items-center gap-2 px-5'>
-                {
-                    services.map((service, i) =>
-                        <Link to={`/services/${service.name}`}>
-                            <div key={i} className='grid justify-items-start hover:scale-125 transition duration-500 ease-in-out'>
-                                <figure className="px-10 pt-10">
-                                    <img src={service.img} alt="Shoes" className="rounded-xl" />
-                                </figure>
-                                <div className="card-body items-center text-center">
-                                    <h2 className="card-title">{service.name}</h2>
-                                    <p>{service.description}</p>
-                                </div>
-                            </div>
-                        </Link>
-
-                    )
-                }
-
-
-            </div>
-
-
-
+            <h1>single service</h1>
         </div>
+
     );
 };
 
