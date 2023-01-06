@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import UserContext, { AuthContext } from '../../Context/UserContext';
-import Google from '../../assets/icons/google.svg';
-import Facebook from '../../assets/icons/facebook.svg';
+import Google from '../../../assets/icons/google.svg';
+import Facebook from '../../../assets/icons/facebook.svg';
+import { AuthContext } from '../../../Context/UserContext';
 
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext);

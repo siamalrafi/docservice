@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import Google from '../../assets/icons/google.svg';
-import Facebook from '../../assets/icons/facebook.svg';
+import Google from  '../../../assets/icons/google.svg';
+import Facebook from '../../../assets/icons/facebook.svg';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../../Context/UserContext';
-
+import { AuthContext } from '../../../Context/UserContext';
+ 
 
 const SignUp = () => {
     const { createUser, nameUpdate, varifyEmail, googleSignIn, } = useContext(AuthContext);
@@ -47,11 +47,9 @@ const SignUp = () => {
                 console.log(user);
             })
             .catch((error) => console.error(error.message))
-    }
+    };
 
-
-
-
+    
 
     return (
         <div className="mx-auto max-w-6xl px-12">
