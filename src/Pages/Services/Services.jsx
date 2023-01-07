@@ -54,13 +54,15 @@ const Services = () => {
                 {
                     services.map((service, i) =>
                         <Link to={`/services/${service.name}`}>
-                            <div key={i} className='grid justify-items-start hover:scale-125 transition duration-500 ease-in-out'>
+                            <div key={i} className='group grid justify-items-start hover:scale-125 transition duration-500 ease-in-out'>
                                 <figure className="px-10 pt-10">
                                     <img src={service.img} alt="Shoes" className="rounded-xl" />
                                 </figure>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{service.name}</h2>
                                     <p>{service.description}</p>
+
+                                    <p className='hidden  group-hover:block'>next</p>
                                 </div>
                             </div>
                         </Link>
