@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Medical",
+        "description": "The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor.",
+        "img": "https://i.ibb.co/MkM27JD/Medical.jpg"
+    },
+    {
+        "name": "Consultant",
+        "description": "A consultant physician is a senior doctor who practises in one of the medical specialties. Once specialty training has been completed.",
+        "img": "https://i.ibb.co/GJBrSYW/Consultant.jpg"
+    },
+    {
+        "name": "Physiologist",
+        "description": "Physiologists are highly trained medical scientists with a master degree or doctoral degree.With zeal and expertise in studying how humans.",
+        "img": "https://i.ibb.co/gPP7w8x/Physiologist.jpg"
+    },
+    {
+        "name": "Surgical",
+        "description": "The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment.",
+        "img": "https://i.ibb.co/gm0r69m/img1.webp"
+    },
+    {
+        "name": "Psychiatrist",
+        "description": "A psychiatrist is a physician who specializes in psychiatry, the branch of medicine devoted to the diagnosis, prevention, study, and treatment of mental disorders.",
+        "img": "https://i.ibb.co/1Tywt4z/img3.webp"
+    },
+    {
+        "name": "Therapist",
+        "description": "A therapist is a licensed counselor or psychologist who can use talk therapy to help you treat mental health symptoms and improve how you manage stress and relationships.",
+        "img": "https://i.ibb.co/f83x52B/img2.jpg"
+    }
+]

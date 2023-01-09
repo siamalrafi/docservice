@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Medical from '../../assets/skills/Medical.png';
 import Consultant from '../../assets/skills/Consultant.png';
 import Physiologist from '../../assets/skills/Physiologist.png';
@@ -7,41 +7,64 @@ import img2 from '../../assets/skills/img2.png';
 import img3 from '../../assets/skills/img3.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleDown, faArrowRight, faArrowRightArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const Services = () => {
+    const [services, setServices] = useState([]);
+    /* 
+        const services = [
+            {
+                name: 'Medical',
+                description: 'The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor.',
+                img: Medical
+            },
+            {
+                name: 'Consultant',
+                description: 'A consultant physician is a senior doctor who practises in one of the medical specialties. Once specialty training has been completed.',
+                img: Consultant
+            },
+            {
+                name: 'Physiologist',
+                description: 'Physiologists are highly trained medical scientists with a master degree or doctoral degree.With zeal and expertise in studying how humans.',
+                img: Physiologist
+            },
+            {
+                name: 'Surgical ', description: 'The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment.',
+                img: img1
+            },
+            {
+                name: 'Psychiatrist ', description: 'A psychiatrist is a physician who specializes in psychiatry, the branch of medicine devoted to the diagnosis, prevention, study, and treatment of mental disorders.',
+                img: img3
+            },
+            {
+                name: 'Therapist', description: 'A therapist is a licensed counselor or psychologist who can use talk therapy to help you treat mental health symptoms and improve how you manage stress and relationships.',
+                img: img2
+            },
+    
+        ]; */
 
-    const services = [
-        {
-            name: 'Medical',
-            description: 'The Doctor of Medicine (M.D.) degree is a five-year graduate program intended to teach students the essentials of being a Medical Doctor.',
-            img: Medical
-        },
-        {
-            name: 'Consultant',
-            description: 'A consultant physician is a senior doctor who practises in one of the medical specialties. Once specialty training has been completed.',
-            img: Consultant
-        },
-        {
-            name: 'Physiologist',
-            description: 'Physiologists are highly trained medical scientists with a master degree or doctoral degree.With zeal and expertise in studying how humans.',
-            img: Physiologist
-        },
-        {
-            name: 'Surgical ', description: 'The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment.',
-            img: img1
-        },
-        {
-            name: 'Psychiatrist ', description: 'A psychiatrist is a physician who specializes in psychiatry, the branch of medicine devoted to the diagnosis, prevention, study, and treatment of mental disorders.',
-            img: img3
-        },
-        {
-            name: 'Therapist', description: 'A therapist is a licensed counselor or psychologist who can use talk therapy to help you treat mental health symptoms and improve how you manage stress and relationships.',
-            img: img2
-        },
 
-    ];
+    useEffect(() => {
+        fetch('services.json')
+            .then(res => res.json())
+            .then(data => setServices(data))
+    }, []);
+
+
+    /* 
+        const { data: allbuyers = [], isLoading, refetch } = useQuery({
+        queryKey: ['allbuyers'],
+        queryFn: async () => {
+            const res = await fetch(`https://my-mirraw-server.vercel.app/seller`)
+            const data = await res.json();
+            return data
+        }
+    });
+ */
+
+
+
 
     return (
         <div>
