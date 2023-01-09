@@ -16,7 +16,7 @@ const Services = () => {
     const { data: services = [], isLoading, refetch } = useQuery({
         queryKey: ['services'],
         queryFn: async () => {
-            const res = await fetch(`services.json`)
+            const res = await fetch(`http://localhost:5000/services`)
             const data = await res.json();
             return data
         }
@@ -51,7 +51,6 @@ const Services = () => {
                                 </div>
                             </div>
                         </Link>
-
                     )
                 }
             </div>

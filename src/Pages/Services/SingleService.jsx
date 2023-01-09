@@ -10,8 +10,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const Services = () => {
     const data = useLoaderData();
-
-
+    console.log(data);
     return (
 
         <div>

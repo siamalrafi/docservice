@@ -24,9 +24,7 @@ const Home = () => {
             <MakeAppointment></MakeAppointment>
             <Testimonial></Testimonial>
             <SubscriptionPlan></SubscriptionPlan>
-            <Contact></Contact>
-
-
+            <Contact></Contact> 
 
         </div>
     );
