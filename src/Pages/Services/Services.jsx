@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Medical from '../../assets/skills/Medical.png';
-import Consultant from '../../assets/skills/Consultant.png';
-import Physiologist from '../../assets/skills/Physiologist.png';
-import img1 from '../../assets/skills/img1.png';
-import img2 from '../../assets/skills/img2.png';
-import img3 from '../../assets/skills/img3.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useQuery } from '@tanstack/react-query';
+import LoadingPage from '../../Pages/Shared/LoadingPage/LoadingPage'
 
 
 const Services = () => {
@@ -22,8 +17,8 @@ const Services = () => {
         }
     });
 
-    if(isLoading){
-        return <h1>Loading ..........</h1>
+    if (isLoading) {
+        return <LoadingPage></LoadingPage>
     }
 
     return (
