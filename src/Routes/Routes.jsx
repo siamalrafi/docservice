@@ -32,6 +32,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/Services/:name',
+                loader: async ({ params }) => fetch(`api`),
                 element: <SingleService></SingleService>
             },
             {
