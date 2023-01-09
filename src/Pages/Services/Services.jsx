@@ -62,7 +62,7 @@ const Services = () => {
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{service.name}</h2>
                                     <p>{service.description}</p>
-                                    <p className='hidden group-hover:block'>
+                                    <p className='hidden text-2xl group-hover:block'>
                                         <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
                                     </p>
                                 </div>
