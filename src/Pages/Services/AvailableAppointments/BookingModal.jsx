@@ -8,12 +8,18 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     // Show Service Name
     const segment_str = window.location.pathname;
     const segment_array = segment_str.split('/');
-    const last_segment = segment_array.pop();
+    const treatmentName = segment_array.pop();
 
-    console.log(last_segment);
+
 
     const handleBooking = event => {
         event.preventDefault();
+
+        const segment_str = window.location.pathname;
+        const segment_array = segment_str.split('/');
+        const treatmentName = segment_array.pop();
+
+        console.log(treatmentName);
 
         const form = event.target;
         const slot = form.slot.value;
@@ -23,7 +29,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
         // [3, 4, 5].map((value, i) => console.log(value))
         const booking = {
             appointmentDate: date,
-            treatment: name,
+            treatmentName: treatmentName,
             patient: name,
             slot,
             email,
@@ -44,36 +50,30 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
 
 
     return (
-
         <>
-            <div>
-                <input type="checkbox" id="booking-modal" className="modal-toggle" />
-                <div className="modal">
-                    <div className="modal-box relative">
-                        <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                        <h3 className="text-2xl font-bold text-center">{last_segment}</h3>
-                        <h3 className="text-lg font-bold">{name}</h3>
-                        <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
-                            <input type="text" disabled value={date} className="input w-full input-bordered " />
-                            <select name="slot" className="select select-bordered w-full">
-                                {
-                                    slots.map((slot, i) => <option
-                                        value={slot}
-                                        key={i}
-                                    >{slot}</option>)
-                                }
-                            </select>
-                            <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
-                            <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
-                            <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" />
-                            <br />
-                            <input className='btn btn-accent w-full' type="submit" value="Submit" />
-                        </form>
-                    </div>
+            <input type="checkbox" id="booking-modal" className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box relative">
+                    <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 className="text-2xl font-bold text-center">{treatmentName}</h3>
+                    <h3 className="text-lg font-bold">{name}</h3>
+                    <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
+                        <input type="text" disabled value={date} className="input w-full input-bordered " />
+                        <select name="slot" className="select select-bordered w-full">
+                            {
+                                slots.map((slot, i) => <option
+                                    value={slot}
+                                    key={i}
+                                >{slot}</option>)
+                            }
+                        </select>
+                        <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
+                        <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
+                        <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" />
+                        <br />
+                        <input className='btn btn-accent w-full' type="submit" value="Submit" />
+                    </form>
                 </div>
-
-
-
             </div>
         </>
     );
