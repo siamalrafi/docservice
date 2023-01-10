@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
 import Loading from '../../Shared/LoadingPage/LoadingPage';
 import AppointmentOption from '../AvailableAppointments/AppointmentOption'
+import BookingModal from './BookingModal';
 
 
 const AvailableAppointments = ({ selectedDate }) => {
@@ -38,8 +39,22 @@ const AvailableAppointments = ({ selectedDate }) => {
                         ></AppointmentOption>)
                     }
                 </div>
+
+
+                <BookingModal
+                    // treatment={treatment}
+                    // setTreatment={setTreatment}
+                    // selectedDate={selectedDate}
+                >
+
+                </BookingModal>
+
+
+
+
+
             </section >
-        </div>
+        </div >
     );
 };
 
