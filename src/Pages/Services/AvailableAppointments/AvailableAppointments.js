@@ -21,8 +21,7 @@ const AvailableAppointments = ({ selectedDate }) => {
 
     if (isLoading) {
         return <Loading></Loading>
-    }
-
+    };
 
 
     return (
@@ -40,14 +39,18 @@ const AvailableAppointments = ({ selectedDate }) => {
                     }
                 </div>
 
+                {
+                    treatment &&
+                    <BookingModal
+                        treatment={treatment}
+                        selectedDate={selectedDate}
+                        setTreatment={setTreatment}
+                    >
 
-                <BookingModal
-                    // treatment={treatment}
-                    // setTreatment={setTreatment}
-                    // selectedDate={selectedDate}
-                >
+                    </BookingModal>
+                }
 
-                </BookingModal>
+
 
 
 

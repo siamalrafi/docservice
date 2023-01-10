@@ -1,7 +1,7 @@
 [
   {
       "_id": 1,
-      "name": "Elda Mills",
+      "name": "Dr. Elda Mills",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": [
           "08.00 AM - 08.30 AM",
@@ -24,7 +24,7 @@
   },
   {
       "_id": 2,
-      "name": "Goncalves Silva",
+      "name": "Dr. Goncalves Silva",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": [
           "08.00 AM - 08.30 AM",
@@ -47,7 +47,7 @@
   },
   {
       "_id": 3,
-      "name": "Daniel Castro",
+      "name": "Dr. Daniel Castro",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": [
           "08.00 AM - 08.30 AM",
@@ -70,7 +70,7 @@
   },
   {
       "_id": 4,
-      "name": "Paulo Goncalves",
+      "name": "Dr. Paulo Goncalves",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": [
           "08.00 AM - 08.30 AM",
@@ -93,13 +93,13 @@
   },
   {
       "_id": 5,
-      "name": "Carolina Rocha",
+      "name": "Dr. Carolina Rocha",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": []
   },
   {
       "_id": 6,
-      "name": "Ethan Mills",
+      "name": "Dr. Ethan Mills",
       "doctorsImg": "https://placeimg.com/192/192/people",
       "slots": [
           "08.00 AM - 08.30 AM",
