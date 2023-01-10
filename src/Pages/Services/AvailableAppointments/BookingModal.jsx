@@ -4,10 +4,17 @@ import React from 'react';
 const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     const { name, slots } = treatment;
     const date = format(selectedDate, 'PP');
-    console.log(treatment);
+
+    // Show Service Name
+    const segment_str = window.location.pathname;
+    const segment_array = segment_str.split('/');
+    const last_segment = segment_array.pop();
+
+    console.log(last_segment);
 
     const handleBooking = event => {
         event.preventDefault();
+
         const form = event.target;
         const slot = form.slot.value;
         const name = form.name.value;
@@ -21,7 +28,9 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
             slot,
             email,
             phone,
-        }
+        };
+
+        console.log(booking);
 
         // TODO: send data to the server
         // and once data is saved then close the modal 
@@ -37,12 +46,12 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     return (
 
         <>
-
             <div>
                 <input type="checkbox" id="booking-modal" className="modal-toggle" />
                 <div className="modal">
                     <div className="modal-box relative">
                         <label htmlFor="booking-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                        <h3 className="text-2xl font-bold text-center">{last_segment}</h3>
                         <h3 className="text-lg font-bold">{name}</h3>
                         <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
                             <input type="text" disabled value={date} className="input w-full input-bordered " />
