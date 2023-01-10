@@ -1,11 +1,11 @@
 import { useQuery } from '@tanstack/react-query';
 import { format } from 'date-fns';
 import React, { useEffect, useState } from 'react';
+import Loading from '../../Shared/LoadingPage/LoadingPage';
 import AppointmentOption from '../AvailableAppointments/AppointmentOption'
 
 
 const AvailableAppointments = ({ selectedDate }) => {
-    // const [appointmentOptions, setAppointmentOptions] = useState([]);
     const [treatment, setTreatment] = useState(null);
 
 
@@ -18,7 +18,10 @@ const AvailableAppointments = ({ selectedDate }) => {
         }
     });
 
-    console.log(appointmentOptions);
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
 
 
     return (
