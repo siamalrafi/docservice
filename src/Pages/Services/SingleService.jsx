@@ -1,29 +1,41 @@
 import React, { useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import { DayPicker } from 'react-day-picker';
 import appointment from '../../assets/images/appointment.png';
+import { format } from 'date-fns';
+import AvailableAppointments from './AvailableAppointments/AvailableAppointments';
 
 
-const Services = () => {
+const SingleService = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
-
     const data = useLoaderData();
-    console.log(data);
-    return (
 
-        <div className="hero bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <img src={appointment} alt='appointment' className="rounded-lg h-80 w-80 shadow-2xl" />
-                <div>
-                    <DayPicker
-                        mode="single"
-                        selected={selectedDate}
-                        onSelect={setSelectedDate} />
+    return (
+        <div>
+            <div className='bg-base-200'>
+                <div className="hero">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={appointment} alt='appointment' className="rounded-lg h-80 w-80 shadow-2xl" />
+                        <div>
+                            <DayPicker
+                                mode="single"
+                                selected={selectedDate}
+                                onSelect={setSelectedDate} />
+                            <p>you selected {format(selectedDate, 'PP')}</p>
+
+
+
+                        </div>
+                    </div>
                 </div>
+
+                <AvailableAppointments>
+
+                </AvailableAppointments>
             </div>
         </div>
 
     );
 };
 
-export default Services;
+export default SingleService;
