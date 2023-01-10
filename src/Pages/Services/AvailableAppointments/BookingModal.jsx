@@ -65,7 +65,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                             </select>
                             <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
                             <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
-                            <input name="phone" type="text" placeholder="Phone Number" className="input w-full input-bordered" />
+                            <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" />
                             <br />
                             <input className='btn btn-accent w-full' type="submit" value="Submit" />
                         </form>
