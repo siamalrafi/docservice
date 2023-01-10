@@ -7,8 +7,8 @@ import AvailableAppointments from './AvailableAppointments/AvailableAppointments
 
 
 const SingleService = () => {
-    const [selectedDate, setSelectedDate] = useState(new Date());
     const data = useLoaderData();
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
     return (
         <div>
@@ -29,8 +29,9 @@ const SingleService = () => {
                     </div>
                 </div>
 
-                <AvailableAppointments>
-
+                <AvailableAppointments
+                    selectedDate={selectedDate}
+                >
                 </AvailableAppointments>
             </div>
         </div>
