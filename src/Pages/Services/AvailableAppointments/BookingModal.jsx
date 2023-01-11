@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     const { name, slots } = treatment;
@@ -19,14 +20,12 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
         const segment_array = segment_str.split('/');
         const treatmentName = segment_array.pop();
 
-        console.log(treatmentName);
-
         const form = event.target;
         const slot = form.slot.value;
         const name = form.name.value;
         const email = form.email.value;
         const phone = form.phone.value;
-        // [3, 4, 5].map((value, i) => console.log(value))
+
         const booking = {
             appointmentDate: date,
             treatmentName: treatmentName,
@@ -36,12 +35,30 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
             phone,
         };
 
-        console.log(booking);
 
-        // TODO: send data to the server
-        // and once data is saved then close the modal 
-        // and display success toast
-        console.log(booking);
+        fetch('http://localhost:5000/booking', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.acknowledged) {
+                    toast.success('Booking confirmed');
+                }
+                else {
+                    toast.error('Error! Please try again');
+                }
+            })
+
+
+
+
+
+
         setTreatment(null);
     }
 
