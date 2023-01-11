@@ -22,8 +22,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 toast.success(`successfully logged in`);
-                // navigate(form, { replace: true })
-                navigate('/')
+                navigate(from, { replace: true })
             })
             .catch((error) => {
                 console.error(error);
@@ -37,6 +36,8 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 console.log(user);
+                toast.success(`successfully logged in`);
+                navigate(from, { replace: true })
             })
             .catch((error) => console.error(error.message))
     };
