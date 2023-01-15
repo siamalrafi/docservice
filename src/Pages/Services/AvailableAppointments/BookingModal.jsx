@@ -1,8 +1,14 @@
 import { format } from 'date-fns';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { toast } from 'react-toastify';
+import AuthContext from '../../../Context/UserContext';
+
 
 const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
+    // const { user, logOut } = useContext(AuthContext);
+    // console.log(user?.email);
+    // NOT available to destructure  
+
     const { name, slots } = treatment;
     const date = format(selectedDate, 'PP');
 
@@ -10,7 +16,6 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     const segment_str = window.location.pathname;
     const segment_array = segment_str.split('/');
     const treatmentName = segment_array.pop();
-
 
 
     const handleBooking = event => {
@@ -29,7 +34,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
         const booking = {
             appointmentDate: date,
             treatmentName: treatmentName,
-            patient: name,
+            patientName: name,
             slot,
             email,
             phone,
@@ -54,15 +59,8 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                 }
             })
 
-
-
-
-
-
         setTreatment(null);
-    }
-
-
+    };
 
 
 
@@ -84,9 +82,9 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                                 >{slot}</option>)
                             }
                         </select>
-                        <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" />
-                        <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" />
-                        <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" />
+                        <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                        <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" required />
+                        <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" required />
                         <br />
                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
                     </form>
