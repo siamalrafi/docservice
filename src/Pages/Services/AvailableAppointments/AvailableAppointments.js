@@ -1,14 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 import { format } from 'date-fns';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../../Context/UserContext';
 import Loading from '../../Shared/LoadingPage/LoadingPage';
 import AppointmentOption from '../AvailableAppointments/AppointmentOption'
 import BookingModal from './BookingModal';
 
 
+
+
 const AvailableAppointments = ({ selectedDate }) => {
     const [treatment, setTreatment] = useState(null);
-
 
 
     const { data: appointmentOptions = [], isLoading, refetch } = useQuery({

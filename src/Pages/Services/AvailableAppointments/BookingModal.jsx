@@ -1,13 +1,13 @@
 import { format } from 'date-fns';
 import React, { useContext, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import AuthContext from '../../../Context/UserContext';
+import { AuthContext } from '../../../Context/UserContext';
 
 
 const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
-    // const { user, logOut } = useContext(AuthContext);
-    // console.log(user?.email);
-    // NOT available to destructure  
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user?.email);
+
 
     const { name, slots } = treatment;
     const date = format(selectedDate, 'PP');
@@ -82,8 +82,8 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                                 >{slot}</option>)
                             }
                         </select>
-                        <input name="name" type="text" placeholder="Your Name" className="input w-full input-bordered" required />
-                        <input name="email" type="email" placeholder="Email Address" className="input w-full input-bordered" required />
+                        <input name="name" defaultValue={user?.displayName} type="text" placeholder="Your Name" className="input w-full input-bordered" required />
+                        <input name="email" defaultValue={user?.email} type="email" placeholder="Email Address" className="input w-full input-bordered" required />
                         <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" required />
                         <br />
                         <input className='btn btn-accent w-full' type="submit" value="Submit" />
@@ -94,4 +94,4 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
     );
 };
 
-export default BookingModal;
+export default BookingModal;  

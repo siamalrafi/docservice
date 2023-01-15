@@ -6,7 +6,6 @@ import { AuthContext } from '../../../Context/UserContext';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user?.email);
 
     const manuItems = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
