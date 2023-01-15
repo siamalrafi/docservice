@@ -11,12 +11,12 @@ import BookingModal from './BookingModal';
 
 const AvailableAppointments = ({ selectedDate }) => {
     const [treatment, setTreatment] = useState(null);
-
+    const date = format(selectedDate, 'PP');
 
     const { data: appointmentOptions = [], isLoading, refetch } = useQuery({
-        queryKey: ['appointmentOptions'],
+        queryKey: ['appointmentOptions', date],
         queryFn: async () => {
-            const res = await fetch(`/appointmentOptions.json`)
+            const res = await fetch(`http://localhost:5000/AvailableAppointments?date=${date}`);
             const data = await res.json();
             return data
         }
@@ -26,6 +26,7 @@ const AvailableAppointments = ({ selectedDate }) => {
         return <Loading></Loading>
     };
 
+    console.log(appointmentOptions);
 
     return (
         <div>
@@ -34,7 +35,7 @@ const AvailableAppointments = ({ selectedDate }) => {
 
                 <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-6'>
                     {
-                        appointmentOptions.map(option => <AppointmentOption
+                        appointmentOptions?.map(option => <AppointmentOption
                             key={option._id}
                             appointmentOption={option}
                             setTreatment={setTreatment}
@@ -45,11 +46,11 @@ const AvailableAppointments = ({ selectedDate }) => {
                 {
                     treatment &&
                     <BookingModal
+                        refetch={refetch}
                         treatment={treatment}
                         selectedDate={selectedDate}
                         setTreatment={setTreatment}
                     >
-
                     </BookingModal>
                 }
 

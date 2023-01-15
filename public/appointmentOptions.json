@@ -1,123 +1,123 @@
 [
-  {
-      "_id": 1,
-      "name": "Dr. Elda Mills",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": [
-          "08.00 AM - 08.30 AM",
-          "08.30 AM - 09.00 AM",
-          "09.00 AM - 9.30 AM",
-          "09.30 AM - 10.00 AM",
-          "10.00 AM - 10.30 AM",
-          "10.30 AM - 11.00 AM",
-          "11.00 AM - 11.30 AM",
-          "11.30 AM - 12.00 AM",
-          "1.00 PM - 1.30 PM",
-          "1.30 PM - 2.00 PM",
-          "2.00 PM - 2.30 PM",
-          "2.30 PM - 3.00 PM",
-          "3.00 PM - 3.30 PM",
-          "3.30 PM - 4.00 PM",
-          "4.00 PM - 4.30 PM",
-          "4.30 PM - 5.00 PM"
-      ]
-  },
-  {
-      "_id": 2,
-      "name": "Dr. Goncalves Silva",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": [
-          "08.00 AM - 08.30 AM",
-          "08.30 AM - 09.00 AM",
-          "09.00 AM - 9.30 AM",
-          "09.30 AM - 10.00 AM",
-          "10.00 AM - 10.30 AM",
-          "10.30 AM - 11.00 AM",
-          "11.00 AM - 11.30 AM",
-          "11.30 AM - 12.00 AM",
-          "1.00 PM - 1.30 PM",
-          "1.30 PM - 2.00 PM",
-          "2.00 PM - 2.30 PM",
-          "2.30 PM - 3.00 PM",
-          "3.00 PM - 3.30 PM",
-          "3.30 PM - 4.00 PM",
-          "4.00 PM - 4.30 PM",
-          "4.30 PM - 5.00 PM"
-      ]
-  },
-  {
-      "_id": 3,
-      "name": "Dr. Daniel Castro",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": [
-          "08.00 AM - 08.30 AM",
-          "08.30 AM - 09.00 AM",
-          "09.00 AM - 9.30 AM",
-          "09.30 AM - 10.00 AM",
-          "10.00 AM - 10.30 AM",
-          "10.30 AM - 11.00 AM",
-          "11.00 AM - 11.30 AM",
-          "11.30 AM - 12.00 AM",
-          "1.00 PM - 1.30 PM",
-          "1.30 PM - 2.00 PM",
-          "2.00 PM - 2.30 PM",
-          "2.30 PM - 3.00 PM",
-          "3.00 PM - 3.30 PM",
-          "3.30 PM - 4.00 PM",
-          "4.00 PM - 4.30 PM",
-          "4.30 PM - 5.00 PM"
-      ]
-  },
-  {
-      "_id": 4,
-      "name": "Dr. Paulo Goncalves",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": [
-          "08.00 AM - 08.30 AM",
-          "08.30 AM - 09.00 AM",
-          "09.00 AM - 9.30 AM",
-          "09.30 AM - 10.00 AM",
-          "10.00 AM - 10.30 AM",
-          "10.30 AM - 11.00 AM",
-          "11.00 AM - 11.30 AM",
-          "11.30 AM - 12.00 AM",
-          "1.00 PM - 1.30 PM",
-          "1.30 PM - 2.00 PM",
-          "2.00 PM - 2.30 PM",
-          "2.30 PM - 3.00 PM",
-          "3.00 PM - 3.30 PM",
-          "3.30 PM - 4.00 PM",
-          "4.00 PM - 4.30 PM",
-          "4.30 PM - 5.00 PM"
-      ]
-  },
-  {
-      "_id": 5,
-      "name": "Dr. Carolina Rocha",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": []
-  },
-  {
-      "_id": 6,
-      "name": "Dr. Ethan Mills",
-      "doctorsImg": "https://placeimg.com/192/192/people",
-      "slots": [
-          "08.00 AM - 08.30 AM",
-          "08.30 AM - 09.00 AM",
-          "09.00 AM - 9.30 AM",
-          "09.30 AM - 10.00 AM",
-          "10.00 AM - 10.30 AM",
-          "10.30 AM - 11.00 AM",
-          "11.00 AM - 11.30 AM",
-          "11.30 AM - 12.00 AM",
-          "1.00 PM - 1.30 PM",
-          "1.30 PM - 2.00 PM",
-          "2.00 PM - 2.30 PM",
-          "2.30 PM - 3.00 PM",
-          "3.00 PM - 3.30 PM",
-          "3.30 PM - 4.00 PM",
-          "4.00 PM - 4.30 PM",
-          "4.30 PM - 5.00 PM"
-      ]
-  }
+    {
+        "_id": 1,
+        "name": "Dr. Elda Mills",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": [
+            "08.00 AM - 08.30 AM",
+            "08.30 AM - 09.00 AM",
+            "09.00 AM - 9.30 AM",
+            "09.30 AM - 10.00 AM",
+            "10.00 AM - 10.30 AM",
+            "10.30 AM - 11.00 AM",
+            "11.00 AM - 11.30 AM",
+            "11.30 AM - 12.00 AM",
+            "1.00 PM - 1.30 PM",
+            "1.30 PM - 2.00 PM",
+            "2.00 PM - 2.30 PM",
+            "2.30 PM - 3.00 PM",
+            "3.00 PM - 3.30 PM",
+            "3.30 PM - 4.00 PM",
+            "4.00 PM - 4.30 PM",
+            "4.30 PM - 5.00 PM"
+        ]
+    },
+    {
+        "_id": 2,
+        "name": "Dr. Goncalves Silva",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": [
+            "08.00 AM - 08.30 AM",
+            "08.30 AM - 09.00 AM",
+            "09.00 AM - 9.30 AM",
+            "09.30 AM - 10.00 AM",
+            "10.00 AM - 10.30 AM",
+            "10.30 AM - 11.00 AM",
+            "11.00 AM - 11.30 AM",
+            "11.30 AM - 12.00 AM",
+            "1.00 PM - 1.30 PM",
+            "1.30 PM - 2.00 PM",
+            "2.00 PM - 2.30 PM",
+            "2.30 PM - 3.00 PM",
+            "3.00 PM - 3.30 PM",
+            "3.30 PM - 4.00 PM",
+            "4.00 PM - 4.30 PM",
+            "4.30 PM - 5.00 PM"
+        ]
+    },
+    {
+        "_id": 3,
+        "name": "Dr. Daniel Castro",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": [
+            "08.00 AM - 08.30 AM",
+            "08.30 AM - 09.00 AM",
+            "09.00 AM - 9.30 AM",
+            "09.30 AM - 10.00 AM",
+            "10.00 AM - 10.30 AM",
+            "10.30 AM - 11.00 AM",
+            "11.00 AM - 11.30 AM",
+            "11.30 AM - 12.00 AM",
+            "1.00 PM - 1.30 PM",
+            "1.30 PM - 2.00 PM",
+            "2.00 PM - 2.30 PM",
+            "2.30 PM - 3.00 PM",
+            "3.00 PM - 3.30 PM",
+            "3.30 PM - 4.00 PM",
+            "4.00 PM - 4.30 PM",
+            "4.30 PM - 5.00 PM"
+        ]
+    },
+    {
+        "_id": 4,
+        "name": "Dr. Paulo Goncalves",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": [
+            "08.00 AM - 08.30 AM",
+            "08.30 AM - 09.00 AM",
+            "09.00 AM - 9.30 AM",
+            "09.30 AM - 10.00 AM",
+            "10.00 AM - 10.30 AM",
+            "10.30 AM - 11.00 AM",
+            "11.00 AM - 11.30 AM",
+            "11.30 AM - 12.00 AM",
+            "1.00 PM - 1.30 PM",
+            "1.30 PM - 2.00 PM",
+            "2.00 PM - 2.30 PM",
+            "2.30 PM - 3.00 PM",
+            "3.00 PM - 3.30 PM",
+            "3.30 PM - 4.00 PM",
+            "4.00 PM - 4.30 PM",
+            "4.30 PM - 5.00 PM"
+        ]
+    },
+    {
+        "_id": 5,
+        "name": "Dr. Carolina Rocha",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": []
+    },
+    {
+        "_id": 6,
+        "name": "Dr. Ethan Mills",
+        "doctorsImg": "https://placeimg.com/192/192/people",
+        "slots": [
+            "08.00 AM - 08.30 AM",
+            "08.30 AM - 09.00 AM",
+            "09.00 AM - 9.30 AM",
+            "09.30 AM - 10.00 AM",
+            "10.00 AM - 10.30 AM",
+            "10.30 AM - 11.00 AM",
+            "11.00 AM - 11.30 AM",
+            "11.30 AM - 12.00 AM",
+            "1.00 PM - 1.30 PM",
+            "1.30 PM - 2.00 PM",
+            "2.00 PM - 2.30 PM",
+            "2.30 PM - 3.00 PM",
+            "3.00 PM - 3.30 PM",
+            "3.30 PM - 4.00 PM",
+            "4.00 PM - 4.30 PM",
+            "4.30 PM - 5.00 PM"
+        ]
+    }
 ]

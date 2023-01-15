@@ -4,12 +4,14 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
 
 
-const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
+const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
     const { user, logOut } = useContext(AuthContext);
     console.log(user?.email);
 
 
     const { name, slots } = treatment;
+
+    console.log(slots);
     const date = format(selectedDate, 'PP');
 
     // Show Service Name
@@ -53,6 +55,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                 console.log(data);
                 if (data.acknowledged) {
                     toast.success('Booking confirmed');
+                    refetch();
                 }
                 else {
                     toast.error('Error! Please try again');
@@ -76,7 +79,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment }) => {
                         <input type="text" disabled value={date} className="input w-full input-bordered " />
                         <select name="slot" className="select select-bordered w-full">
                             {
-                                slots.map((slot, i) => <option
+                                slots?.map((slot, i) => <option
                                     value={slot}
                                     key={i}
                                 >{slot}</option>)
