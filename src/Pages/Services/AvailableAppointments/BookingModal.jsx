@@ -5,13 +5,10 @@ import { AuthContext } from '../../../Context/UserContext';
 
 
 const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
-    const { user, logOut } = useContext(AuthContext);
-    console.log(user?.email);
-
+    const { user } = useContext(AuthContext);
 
     const { name, slots } = treatment;
 
-    console.log(slots);
     const date = format(selectedDate, 'PP');
 
     // Show Service Name
