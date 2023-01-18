@@ -40,18 +40,22 @@ const router = createBrowserRouter([
                 element: <Blog></Blog>
             },
             {
-                path: '/dashboard',
-                element: <PrivateRoutes>
-                    <Dashboard></Dashboard>
-                </PrivateRoutes>
-            },
-            {
                 path: '/signup',
                 element: <SignUp></SignUp>
             },
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/dashboard',
+                element: <PrivateRoutes> <Dashboard></Dashboard> </PrivateRoutes>,
+                children: [
+                    {
+                        path: '/dashboard',
+                        element: <Dashboard />
+                    }
+                ]
             },
         ]
     }
