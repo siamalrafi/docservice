@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
-import Navbar from '../Pages/Shared/Navbar/Navbar';
 import { FaBookmark, FaMagento } from 'react-icons/fa';
 
 const DashboardLayout = () => {
@@ -18,7 +17,6 @@ const DashboardLayout = () => {
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-3 text-center w-60 bg-base-100 text-base-content">
-                        {/* <li><Link className='text-xl text-white  bg-gradient-to-r from-pink-600  to-indigo-500' to="/dashboard">My Appointments</Link></li> */}
                         <li>
                             <Link className=' text text-white bg-gradient-to-r from-indigo-500 to-pink-500'
                                 to="/dashboard">
