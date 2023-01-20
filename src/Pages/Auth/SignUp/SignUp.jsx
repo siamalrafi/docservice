@@ -3,11 +3,14 @@ import Google from '../../../assets/icons/google.svg';
 import Facebook from '../../../assets/icons/facebook.svg';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const SignUp = () => {
     const { createUser, nameUpdate, varifyEmail, googleSignIn, } = useContext(AuthContext);
     const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const navigate = useNavigate();
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -28,7 +31,8 @@ const SignUp = () => {
                             .then(() => {
                                 toast.success(`${name}, Email verification sent!`);
                             });
-
+                        saveUser(name, email)
+                        navigate('/')
                     })
                     .catch((error) => {
                         toast.error(error.message)
@@ -51,6 +55,7 @@ const SignUp = () => {
             .then(res => res.json())
             .then(data => {
                 setCreatedUserEmail(email);
+                toast.success(' successsssss')
             })
     }
 
