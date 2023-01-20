@@ -77,7 +77,7 @@ const Login = () => {
 
                                 <div className="w-full">
                                     <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Password</div>
-                                    <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input name='password' type="password" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" /></div>
+                                    <div className="my-2 bg-white p-1 flex border border-gray-200 rounded">  <input name='password' type="password" className="p-1 px-2 appearance-none outline-none w-full text-gray-800" placeholder='************'/></div>
                                 </div>
                                 <div className="mt-6 relative">
                                     <button type="submit" className="shadow-md font-medium py-2 px-4 text-green-100

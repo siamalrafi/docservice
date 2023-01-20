@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
 import Navbar from '../Pages/Shared/Navbar/Navbar';
+import { FaBookmark, FaMagento } from 'react-icons/fa';
 
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext);
@@ -18,8 +19,25 @@ const DashboardLayout = () => {
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-3 text-center w-60 bg-base-100 text-base-content">
                         {/* <li><Link className='text-xl text-white  bg-gradient-to-r from-pink-600  to-indigo-500' to="/dashboard">My Appointments</Link></li> */}
-                        <li><Link className='text-xl text-white bg-gradient-to-r from-indigo-500 to-pink-500'
-                            to="/dashboard">My Appointments</Link></li>
+                        <li>
+                            <Link className=' text text-white bg-gradient-to-r from-indigo-500 to-pink-500'
+                                to="/dashboard">
+                                <div className='flex justify-items-center'>
+                                    <FaBookmark className='text-xl mt-1' />
+                                    <p className='text-xl'>My Appointments  </p>
+                                </div>
+
+                            </Link>
+                        </li>
+
+                        <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
+                            to="/dashboard/allusers">
+                            <div className='flex justify-items-center'>
+                                <FaMagento className='text-xl mt-1' />
+                                <p className='text-xl'>All Users  </p>
+                            </div>
+                        </Link></li>
+
 
                         {/*  {
                             isAdmin && <>
@@ -31,7 +49,7 @@ const DashboardLayout = () => {
 
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

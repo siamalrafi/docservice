@@ -10,6 +10,7 @@ import Services from '../Pages/Services/Services'
 import SingleService from '../Pages/Services/SingleService'
 import DashboardLayout from "../Layout/DashboardLayout";
 import MyAppointment from "../Pages/Dashboard/MyAppointment/MyAppointment";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
                     {
                         path: '/dashboard',
                         element: <MyAppointment></MyAppointment>
+                    },
+                    {
+                        path: '/dashboard/allusers',
+                        element: <AllUsers></AllUsers>
                     }
                 ]
             },
