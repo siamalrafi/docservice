@@ -31,7 +31,6 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 setLoginUserEmail(user.email);
-
                 toast.success(`successfully logged in`);
                 // navigate(from, { replace: true });
             })
@@ -70,7 +69,6 @@ const Login = () => {
                     <div className="md:w-1/2 flex justify-start mt-5 md:justify-end w-full md:w-1/2 ">
                         <div className="shadow-md flex-auto max-w-sm p-10 pb-20">
 
-
                             <form onSubmit={handleLogin}>
                                 <div className="w-full">
                                     <div className="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"><span className="text-red-400 mr-1">*</span> Email</div>
@@ -86,14 +84,9 @@ const Login = () => {
                   cursor-pointer bg-purple-500 rounded text-lg tr-mt  absolute text-center w-full" >Login In</button>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
-
-
-
-
 
                 <div className='flex justify-center my-5 gap-10 justify-items-center'>
                     <button onClick={handleGoogleSignIn}>
