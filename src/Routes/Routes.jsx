@@ -8,6 +8,8 @@ import Login from "../Pages/Auth/Login/Login";
 import SignUp from "../Pages/Auth/SignUp/SignUp";
 import Services from '../Pages/Services/Services'
 import SingleService from '../Pages/Services/SingleService'
+import DashboardLayout from "../Layout/DashboardLayout";
+import MyAppointment from "../Pages/Dashboard/MyAppointment/MyAppointment";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -47,13 +49,14 @@ const router = createBrowserRouter([
                 path: '/login',
                 element: <Login></Login>
             },
+
             {
                 path: '/dashboard',
-                element: <PrivateRoutes> <Dashboard></Dashboard> </PrivateRoutes>,
+                element: <PrivateRoutes> <DashboardLayout></DashboardLayout>     </PrivateRoutes>,
                 children: [
                     {
                         path: '/dashboard',
-                        element: <Dashboard />
+                        element: <MyAppointment></MyAppointment>
                     }
                 ]
             },
