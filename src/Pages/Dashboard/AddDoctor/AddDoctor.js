@@ -8,9 +8,8 @@ import Loading from '../../Shared/LoadingPage/LoadingPage';
 const AddDoctor = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const imageHostKey = process.env.REACT_APP_appId1;
 
-    console.log(imageHostKey);
+
     const navigate = useNavigate();
 
     const { data: specialties, isLoading } = useQuery({
@@ -27,7 +26,7 @@ const AddDoctor = () => {
         const image = data.image[0];
         const formData = new FormData();
         formData.append('image', image);
-        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
+        const url = `https://api.imgbb.com/1/upload?key=f6303f29dedc1f8ec1e9dea54fcf5cdc`
         fetch(url, {
             method: 'POST',
             body: formData
