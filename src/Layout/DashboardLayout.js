@@ -3,6 +3,8 @@ import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
 import { FaBookmark, FaMagento } from 'react-icons/fa';
 import useAdmin from '../Hooks/useAdmin';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAdd } from '@fortawesome/free-solid-svg-icons';
 
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext);
@@ -46,7 +48,14 @@ const DashboardLayout = () => {
                                 <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
                                     to="/dashboard/addDoctor">
                                     <div className='flex justify-items-center'>
-                                        <FaMagento className='text-xl mt-1 px-1' />
+                                        <FontAwesomeIcon className='text-xl mt-1 px-1' icon={faAdd}></FontAwesomeIcon>
+                                        <p className='text-xl'>Add Doctor  </p>
+                                    </div></Link>
+                                </li>
+                                <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
+                                    to="/dashboard/manageDoctors">
+                                    <div className='flex justify-items-center'>
+                                        <FontAwesomeIcon className='text-xl mt-1 px-1' icon={faAdd}></FontAwesomeIcon>
                                         <p className='text-xl'>Add Doctor  </p>
                                     </div></Link>
                                 </li>
