@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Navigate, useLocation, useNavigate } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Google from '../../../assets/icons/google.svg';
 import Facebook from '../../../assets/icons/facebook.svg';

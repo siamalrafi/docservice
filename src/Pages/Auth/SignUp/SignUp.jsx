@@ -4,12 +4,18 @@ import Facebook from '../../../assets/icons/facebook.svg';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
 import { useNavigate } from 'react-router-dom';
+import useToken from '../../../Hooks/userToken';
 
 
 const SignUp = () => {
     const { createUser, nameUpdate, varifyEmail, googleSignIn, } = useContext(AuthContext);
     const [createdUserEmail, setCreatedUserEmail] = useState('')
+    const [token] = useToken(createdUserEmail);
     const navigate = useNavigate();
+
+    if (token) {
+        navigate('/')
+    }
 
 
     const handleSubmit = (event) => {
@@ -64,23 +70,23 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                getUserToken(email);
+                // getUserToken(email);
                 setCreatedUserEmail(email);
                 toast.success(' successsssss');
             })
     };
 
 
-    const getUserToken = (email) => {
-        fetch(`http://localhost:5000/jwt?email=${email}`)
-            .then(res => res.json())
-            .then(data => {
-                if (data.accessToken) {
-                    localStorage.setItem('accessToken', data.accessToken)
-                    navigate('/')
-                }
-            })
-    }
+    // const getUserToken = (email) => {
+    //     fetch(`http://localhost:5000/jwt?email=${email}`)
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             if (data.accessToken) {
+    //                 localStorage.setItem('accessToken', data.accessToken)
+    //                 // navigate('/');
+    //             }
+    //         })
+    // }
 
 
     return (
