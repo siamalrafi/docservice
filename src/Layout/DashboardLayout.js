@@ -18,35 +18,41 @@ const DashboardLayout = () => {
                 <div className="drawer-side">
                     <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                     <ul className="menu p-3 text-center border-r-4 border-indigo-400 w-60 bg-base-100 text-base-content">
-                        <li>
-                            <Link className=' text text-white bg-gradient-to-r from-indigo-500 to-pink-500'
-                                to="/dashboard">
-                                <div className='flex justify-items-center'>
-                                    <FaBookmark className='text-xl mt-1 px-1' />
-                                    <p className='text-xl'>My Appointments  </p>
-                                </div>
+                        {
+                            !isAdmin && <>
+                                <li>
+                                    <Link className=' text text-white bg-gradient-to-r from-indigo-500 to-pink-500'
+                                        to="/dashboard">
+                                        <div className='flex justify-items-center'>
+                                            <FaBookmark className='text-xl mt-1 px-1' />
+                                            <p className='text-xl'>My Appointments  </p>
+                                        </div>
 
-                            </Link>
-                        </li>
+                                    </Link>
+                                </li>
+                            </>
+                        }
 
                         {
                             isAdmin && <>
                                 <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
-                                    to="/dashboard/allusers">
+                                    to="/dashboard/allUsers">
                                     <div className='flex justify-items-center'>
                                         <FaMagento className='text-xl mt-1 px-1' />
                                         <p className='text-xl'>All Users  </p>
                                     </div></Link>
                                 </li>
+
+                                <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
+                                    to="/dashboard/addDoctor">
+                                    <div className='flex justify-items-center'>
+                                        <FaMagento className='text-xl mt-1 px-1' />
+                                        <p className='text-xl'>Add Doctor  </p>
+                                    </div></Link>
+                                </li>
                             </>
                         }
 
-
-                        {/*  {
-                            isAdmin && <>
-                                <li><Link to="/dashboard/allusers">All users</Link></li>
-                            </>
-                        } */}
 
                     </ul>
 
