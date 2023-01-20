@@ -32,7 +32,7 @@ const SignUp = () => {
                                 toast.success(`${name}, Email verification sent!`);
                             });
                         saveUser(name, email)
-                        navigate('/')
+                        // navigate('/')
                     })
                     .catch((error) => {
                         toast.error(error.message)
@@ -41,6 +41,16 @@ const SignUp = () => {
             })
             .catch((error) => console.error(error));
 
+    };
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                saveUser(user.displayName, user.email)
+            })
+            .catch((error) => console.error(error.message))
     };
 
     const saveUser = (name, email) => {
@@ -54,23 +64,23 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
+                getUserToken(email);
                 setCreatedUserEmail(email);
-                toast.success(' successsssss')
+                toast.success(' successsssss');
             })
-    }
-
-
-
-
-    const handleGoogleSignIn = () => {
-        googleSignIn()
-            .then((result) => {
-                const user = result.user;
-                console.log(user);
-            })
-            .catch((error) => console.error(error.message))
     };
 
+
+    const getUserToken = (email) => {
+        fetch(`http://localhost:5000/jwt?email=${email}`)
+            .then(res => res.json())
+            .then(data => {
+                if (data.accessToken) {
+                    localStorage.setItem('accessToken', data.accessToken)
+                    navigate('/')
+                }
+            })
+    }
 
 
     return (
