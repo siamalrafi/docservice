@@ -2,10 +2,11 @@ import React, { useContext } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { AuthContext } from '../Context/UserContext';
 import { FaBookmark, FaMagento } from 'react-icons/fa';
+import useAdmin from '../Hooks/useAdmin';
 
 const DashboardLayout = () => {
     const { user } = useContext(AuthContext);
-    // const [isAdmin] = useAdmin(user?.email)
+    const [isAdmin] = useAdmin(user?.email)
 
     return (
         <div>
@@ -28,13 +29,17 @@ const DashboardLayout = () => {
                             </Link>
                         </li>
 
-                        <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
-                            to="/dashboard/allusers">
-                            <div className='flex justify-items-center'>
-                                <FaMagento className='text-xl mt-1 px-1' />
-                                <p className='text-xl'>All Users  </p>
-                            </div>
-                        </Link></li>
+                        {
+                            isAdmin && <>
+                                <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
+                                    to="/dashboard/allusers">
+                                    <div className='flex justify-items-center'>
+                                        <FaMagento className='text-xl mt-1 px-1' />
+                                        <p className='text-xl'>All Users  </p>
+                                    </div></Link>
+                                </li>
+                            </>
+                        }
 
 
                         {/*  {
