@@ -1,13 +1,13 @@
-import React, { useContext } from 'react';
-import Google from  '../../../assets/icons/google.svg';
+import React, { useContext, useState } from 'react';
+import Google from '../../../assets/icons/google.svg';
 import Facebook from '../../../assets/icons/facebook.svg';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
- 
+
 
 const SignUp = () => {
     const { createUser, nameUpdate, varifyEmail, googleSignIn, } = useContext(AuthContext);
-
+    const [createdUserEmail, setCreatedUserEmail] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -39,6 +39,23 @@ const SignUp = () => {
 
     };
 
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                setCreatedUserEmail(email);
+            })
+    }
+
+
+
 
     const handleGoogleSignIn = () => {
         googleSignIn()
@@ -49,7 +66,7 @@ const SignUp = () => {
             .catch((error) => console.error(error.message))
     };
 
-    
+
 
     return (
         <div className="mx-auto max-w-6xl px-12">
@@ -57,9 +74,9 @@ const SignUp = () => {
                 <div className="md:w-1/2 max-w-md flex flex-col justify-center">
                     <div className="md:text-4xl text-xl font-black uppercase">Sign Up </div>
                     <div className="text-xl mt-4">Get your best service from DocService.</div>
-             <p className='py-3'>
-                Join thousands of others industry professionals Doctors. Keep up-to-date with the latest mobile news, innovation and technology from around the globe. Don't miss out!
-             </p>
+                    <p className='py-3'>
+                        Join thousands of others industry professionals Doctors. Keep up-to-date with the latest mobile news, innovation and technology from around the globe. Don't miss out!
+                    </p>
                 </div>
                 <div className="md:w-1/2 flex justify-start md:justify-end w-full ">
                     <div className="shadow-md flex-auto max-w-sm p-10 pb-20">
