@@ -14,9 +14,8 @@ const SignUp = () => {
     const navigate = useNavigate();
 
     if (token) {
-        navigate('/')
+        navigate('/');
     }
-
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -70,23 +69,39 @@ const SignUp = () => {
         })
             .then(res => res.json())
             .then(data => {
-                // getUserToken(email);
                 setCreatedUserEmail(email);
-                toast.success(' successsssss');
             })
-    };
+    }
 
 
-    // const getUserToken = (email) => {
-    //     fetch(`http://localhost:5000/jwt?email=${email}`)
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             if (data.accessToken) {
-    //                 localStorage.setItem('accessToken', data.accessToken)
-    //                 // navigate('/');
-    //             }
-    //         })
-    // }
+    /*  const saveUser = (name, email) => {
+         const user = { name, email };
+         fetch('http://localhost:5000/users', {
+             method: 'POST',
+             headers: {
+                 'content-type': 'application/json'
+             },
+             body: JSON.stringify(user)
+         })
+             .then(res => res.json())
+             .then(data => {
+                 getUserToken(email);
+                 setCreatedUserEmail(email);
+                 toast.success(' successsssss');
+             })
+     };
+ 
+ 
+     const getUserToken = (email) => {
+         fetch(`http://localhost:5000/jwt?=email${email}`)
+             .then(res => res.json())
+             .then(data => {
+                 if (data.accessToken) {
+                     localStorage.setItem('accessToken', data.accessToken)
+                     navigate('/')
+                 }
+             })
+     } */
 
 
     return (
