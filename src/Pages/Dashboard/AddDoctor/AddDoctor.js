@@ -19,7 +19,9 @@ const AddDoctor = () => {
             const data = await res.json();
             return data;
         }
-    })
+    });
+
+    console.log(specialties);
 
     const handleAddDoctor = data => {
         const image = data.image[0];
@@ -62,11 +64,13 @@ const AddDoctor = () => {
 
     if (isLoading) {
         return <Loading></Loading>
-    }
+    };
+
 
     return (
         <div className='w-96 p-7'>
             <h2 className="text-4xl">Add A Doctor</h2>
+          
             <form onSubmit={handleSubmit(handleAddDoctor)}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Name</span></label>
@@ -90,8 +94,8 @@ const AddDoctor = () => {
                         {
                             specialties.map(specialty => <option
                                 key={specialty._id}
-                                value={specialty.name}
-                            >{specialty.name}</option>)
+                                value={specialty.treatmentName}
+                            >{specialty.treatmentName}</option>)
                         }
 
 
