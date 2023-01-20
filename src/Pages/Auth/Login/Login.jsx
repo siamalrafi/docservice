@@ -1,15 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Google from '../../../assets/icons/google.svg';
 import Facebook from '../../../assets/icons/facebook.svg';
 import { AuthContext } from '../../../Context/UserContext';
+import useToken from '../../../Hooks/userToken';
 
 const Login = () => {
+
     const { signIn, googleSignIn } = useContext(AuthContext);
-    const navigate = useNavigate();
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
-    const from = location.state?.from?.pathname || '/'
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -21,8 +30,10 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 const user = result.user;
+                setLoginUserEmail(user.email);
+
                 toast.success(`successfully logged in`);
-                navigate(from, { replace: true })
+                // navigate(from, { replace: true });
             })
             .catch((error) => {
                 console.error(error);
@@ -35,9 +46,10 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 const user = result.user;
+                setLoginUserEmail(user.email);
                 console.log(user);
                 toast.success(`successfully logged in`);
-                navigate(from, { replace: true })
+                // navigate(from, { replace: true });
             })
             .catch((error) => console.error(error.message))
     };
