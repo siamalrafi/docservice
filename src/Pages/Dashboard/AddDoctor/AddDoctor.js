@@ -8,8 +8,9 @@ import Loading from '../../Shared/LoadingPage/LoadingPage';
 const AddDoctor = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const imageHostKey = process.env.REACT_APP_imgbb_key;
+    const imageHostKey = process.env.REACT_APP_appId1;
 
+    console.log(imageHostKey);
     const navigate = useNavigate();
 
     const { data: specialties, isLoading } = useQuery({
@@ -21,7 +22,6 @@ const AddDoctor = () => {
         }
     });
 
-    console.log(specialties);
 
     const handleAddDoctor = data => {
         const image = data.image[0];
@@ -41,7 +41,9 @@ const AddDoctor = () => {
                         email: data.email,
                         specialty: data.specialty,
                         image: imgData.data.url
-                    }
+                    };
+
+                    console.log(doctor);
 
                     // save doctor information to the database
                     fetch('http://localhost:5000/doctors', {
@@ -70,7 +72,7 @@ const AddDoctor = () => {
     return (
         <div className='w-96 p-7'>
             <h2 className="text-4xl">Add A Doctor</h2>
-          
+
             <form onSubmit={handleSubmit(handleAddDoctor)}>
                 <div className="form-control w-full max-w-xs">
                     <label className="label"> <span className="label-text">Name</span></label>
