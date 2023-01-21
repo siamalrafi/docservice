@@ -24,7 +24,7 @@ const DashboardLayout = () => {
                             !isAdmin && <>
                                 <li>
                                     <Link className=' text text-white bg-gradient-to-r from-indigo-500 to-pink-500'
-                                        to="/dashboard">
+                                        to="/dashboard/myAppointment">
                                         <div className='flex justify-items-center'>
                                             <FaBookmark className='text-xl mt-1 px-1' />
                                             <p className='text-xl'>My Appointments  </p>
@@ -34,6 +34,7 @@ const DashboardLayout = () => {
                                 </li>
                             </>
                         }
+
 
                         {
                             isAdmin && <>
