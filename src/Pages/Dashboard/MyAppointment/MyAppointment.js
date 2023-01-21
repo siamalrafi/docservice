@@ -1,14 +1,23 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
+import ConfirmationModal from '../../Shared/ConfirmationModal/ConfirmationModal';
+import Loading from '../../Shared/LoadingPage/LoadingPage';
 
 const MyAppointment = () => {
     const { user } = useContext(AuthContext);
+    const [deletingBooking, setDeletingBooking] = useState(null);
+
+    const closeModal = () => {
+        setDeletingBooking(null);
+    }
+
 
     const url = `http://localhost:5000/bookings?email=${user?.email}`;
 
-    const { data: bookings = [] } = useQuery({
+    const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
             const res = await fetch(url, {
@@ -21,8 +30,30 @@ const MyAppointment = () => {
         }
     });
 
+    // console.log(bookings);
 
-    console.log(bookings);
+    const handleDeleteBooking = booking => {
+        fetch(`http://localhost:5000/booking/${booking._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    refetch();
+                    toast.success(`Booking deleted successfully`)
+                }
+            })
+    }
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+
+
 
     return (
         <div>
@@ -62,12 +93,10 @@ const MyAppointment = () => {
                                         booking.price && booking.paid && <span className='text-green-500'>Paid</span>
                                     }
                                 </td>
-                                {/* <td className='btn bg-secondary btn-sm'>Delete</td> */}
-
                                 <td>
-                                    <button className="text-center btn btn-circle btn-outline btn-sm">
+                                    <label onClick={() => setDeletingBooking(booking)} htmlFor="confirmation-modal" className="text-center btn btn-circle btn-outline btn-sm">
                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
-                                    </button>
+                                    </label>
                                 </td>
                             </tr>
                             )
@@ -75,6 +104,18 @@ const MyAppointment = () => {
                     </tbody>
                 </table>
             </div>
+
+            {
+                deletingBooking && <ConfirmationModal
+                    title={`Are you sure you want to delete?`}
+                    message={`If you delete. It cannot be undone.`}
+                    successAction={handleDeleteBooking}
+                    successButtonName="Delete"
+                    modalData={deletingBooking}
+                    closeModal={closeModal}
+                >
+                </ConfirmationModal>
+            }
         </div>
     );
 };
