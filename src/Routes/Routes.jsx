@@ -1,5 +1,6 @@
 import Home from "../Pages/Home/Home";
-import ErrorPage from "../Pages/Extra/ErrorPage/ErrorPage";
+// import ErrorPage from "../Pages/Extra/ErrorPage/ErrorPage";
+
 import Blog from '../Pages/Extra/Blog/Blog';
 import PrivateRoutes from './PrivateRoutes';
 import About from "../Pages/Extra/About/About";
@@ -14,6 +15,7 @@ import AdminRoute from "./AdminRoute";
 import AddDoctor from "../Pages/Dashboard/AddDoctor/AddDoctor";
 import ManageDoctors from '../Pages/Dashboard/ManageDoctors/ManageDoctors'
 import Payment from "../Pages/Dashboard/Payment/Payment";
+import DisplayError from "../Pages/Shared/ErrorPage/ErrorPage";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -22,7 +24,7 @@ const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
-        errorElement: <ErrorPage></ErrorPage>,
+        errorElement: <DisplayError></DisplayError>,
         children: [
             {
                 path: '/',
@@ -78,9 +80,9 @@ const router = createBrowserRouter([
                     },
                     {
                         path: '/dashboard/payment/:id',
-                        element: <AdminRoute><Payment></Payment>
-                        </AdminRoute>
-                    }
+                        element: <Payment></Payment>,
+                        loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                    },
                 ]
             },
         ]

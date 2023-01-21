@@ -10,11 +10,11 @@ const CheckoutForm = ({ booking }) => {
 
     const stripe = useStripe();
     const elements = useElements();
-    const { price, email, patient, _id } = booking;
+    const { price, email, patientName, _id } = booking;
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("https://doctors-portal-server-rust.vercel.app/create-payment-intent", {
+        fetch("http://localhost:5000/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -58,7 +58,7 @@ const CheckoutForm = ({ booking }) => {
                 payment_method: {
                     card: card,
                     billing_details: {
-                        name: patient,
+                        name: patientName,
                         email: email
                     },
                 },
@@ -78,7 +78,7 @@ const CheckoutForm = ({ booking }) => {
                 email,
                 bookingId: _id
             }
-            fetch('https://doctors-portal-server-rust.vercel.app/payments', {
+            fetch('http://localhost:5000/payments', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -102,37 +102,40 @@ const CheckoutForm = ({ booking }) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <CardElement
-                    options={{
-                        style: {
-                            base: {
-                                fontSize: '16px',
-                                color: '#424770',
-                                '::placeholder': {
-                                    color: '#aab7c4',
+
+            <div className='p-10'>
+                <form onSubmit={handleSubmit}>
+                    <CardElement
+                        options={{
+                            style: {
+                                base: {
+                                    fontSize: '16px',
+                                    color: '#424770',
+                                    '::placeholder': {
+                                        color: '#aab7c4',
+                                    },
+                                },
+                                invalid: {
+                                    color: '#9e2146',
                                 },
                             },
-                            invalid: {
-                                color: '#9e2146',
-                            },
-                        },
-                    }}
-                />
-                <button
-                    className='btn btn-sm mt-4 btn-primary'
-                    type="submit"
-                    disabled={!stripe || !clientSecret || processing}>
-                    Pay
-                </button>
-            </form>
-            <p className="text-red-500">{cardError}</p>
-            {
-                success && <div>
-                    <p className='text-green-500'>{success}</p>
-                    <p>Your transactionId: <span className='font-bold'>{transactionId}</span></p>
-                </div>
-            }
+                        }}
+                    />
+                    <button
+                        className='btn btn-sm mt-4 btn-primary'
+                        type="submit"
+                        disabled={!stripe || !clientSecret || processing}>
+                        Pay
+                    </button>
+                </form>
+                <p className="text-red-500">{cardError}</p>
+                {
+                    success && <div>
+                        <p className='text-green-500'>{success}</p>
+                        <p>Your transactionId: <span className='font-bold'>{transactionId}</span></p>
+                    </div>
+                }
+            </div>
         </>
     );
 };

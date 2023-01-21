@@ -1,5 +1,6 @@
 import { format } from 'date-fns';
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
 
@@ -87,7 +88,16 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
                         <input name="email" defaultValue={user?.email} type="email" placeholder="Email Address" className="input w-full input-bordered" required />
                         <input name="phone" type="number" placeholder="Phone Number" className="input w-full input-bordered" required />
                         <br />
-                        <input className='btn btn-accent w-full' type="submit" value="Submit" />
+                        {
+                            user?.email ?
+                                <>
+                                    <input className='btn btn-accent w-full' type="submit" value="Submit" />
+                                </>
+                                :
+                                <>
+                                    <Link className='btn btn-accent w-full' to='/login'>Login</Link>
+                                </>
+                        }
                     </form>
                 </div>
             </div>
