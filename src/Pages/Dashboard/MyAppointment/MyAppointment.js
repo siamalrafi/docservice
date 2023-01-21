@@ -45,7 +45,7 @@ const MyAppointment = () => {
                     refetch();
                     toast.success(`Booking deleted successfully`)
                 }
-            })
+            });
     }
 
     if (isLoading) {
