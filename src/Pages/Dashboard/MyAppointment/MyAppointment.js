@@ -37,6 +37,7 @@ const MyAppointment = () => {
                             <th>Date</th>
                             <th>Time</th>
                             <th>Payment</th>
+                            <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,7 +62,15 @@ const MyAppointment = () => {
                                         booking.price && booking.paid && <span className='text-green-500'>Paid</span>
                                     }
                                 </td>
-                            </tr>)
+                                {/* <td className='btn bg-secondary btn-sm'>Delete</td> */}
+
+                                <td>
+                                    <button className="text-center btn btn-circle btn-outline btn-sm">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                    </button>
+                                </td>
+                            </tr>
+                            )
                         }
                     </tbody>
                 </table>
