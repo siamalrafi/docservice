@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Contact = () => { 
-    
+const Contact = () => {
+
     return (
         <div>
             <section className="overflow-hidden bg-white px-10">
@@ -9,7 +9,7 @@ const Contact = () => {
                     <div className="-mx-4 flex flex-wrap lg:justify-between">
                         <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
                             <div className="my-12 max-w-[570px] lg:mb-0">
-                          
+
                                 <h2 className="text-dark mb-6 text-[32px] font-bold uppercase sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                                     GET IN TOUCH WITH US
                                 </h2>
@@ -41,7 +41,7 @@ const Contact = () => {
                                     </div>
                                     <div className="w-full">
                                         <h4 className="text-dark mb-1 text-xl font-bold">Phone Number</h4>
-                                        <p className="text-body-color text-base">(+62)81 414 257 9980</p>
+                                        <p className="text-body-color text-base">(+880)1800111223</p>
                                     </div>
                                 </div>
                                 <div className="mb-8 flex w-full max-w-[370px]">
@@ -52,7 +52,7 @@ const Contact = () => {
                                     </div>
                                     <div className="w-full">
                                         <h4 className="text-dark mb-1 text-xl font-bold">Email Address</h4>
-                                        <p className="text-body-color text-base">info@yourdomain.com</p>
+                                        <p className="text-body-color text-base">info@docservice.com</p>
                                     </div>
                                 </div>
                             </div>

@@ -44,7 +44,7 @@ const MySkills = () => {
     return (
         <div>
             <div className='text-center mt-14 lg:mx-40 mx-10'>
-                <h1 className='text-3xl text-indigo-500 font-bold mb-3'>My Skills and Experience.</h1>
+                <h1 className='text-3xl text-indigo-500 font-bold mb-3'>Our Skills and Experience.</h1>
                 <p>A large part of being a doctor involves problem-solving and thinking critically to find solutions for your patients. Doctors use these skills to assess symptoms, diagnose conditions and develop a treatment regimen for those in their care</p>
             </div>
 
