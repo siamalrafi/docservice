@@ -3,7 +3,7 @@ import Google from '../../../assets/icons/google.svg';
 import Facebook from '../../../assets/icons/facebook.svg';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../Context/UserContext';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../../../Hooks/userToken';
 
 
@@ -115,7 +115,7 @@ const SignUp = () => {
                     </p>
                 </div>
                 <div className="md:w-1/2 flex justify-start md:justify-end w-full ">
-                    <div className="shadow-md flex-auto max-w-sm p-10 pb-20">
+                    <div className="shadow-md flex-auto max-w-sm px-10 py-5">
 
                         <form onSubmit={handleSubmit}>
 
@@ -142,8 +142,9 @@ const SignUp = () => {
                                 <button type="submit" className="shadow-md font-medium py-2 px-4 text-green-100
                   cursor-pointer bg-purple-500 rounded text-lg tr-mt  absolute text-center w-full" >Sign Up</button>
                             </div>
-
                         </form>
+                        <p className='pt-16'>Already have an account?  <Link className='text-secondary' to="/login">Login</Link></p>
+
                     </div>
                 </div>
             </div>

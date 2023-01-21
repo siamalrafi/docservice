@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Picture from '../../../../src/assets/picture.png';
 
 const Banner = () => {
@@ -13,16 +14,22 @@ const Banner = () => {
                     <p>Consulting a healthcare professional, buying medicine, ordering lab tests and improving your health and wellbeing, all can be done 24/7 with DocTime!</p>
 
                     <div className='my-5 text-center font-bold flex gap-2'>
-                        <button className="btn normal-case text-white hover:bg-indigo-600 bg-indigo-600 rounded-full">
-                            <span className='ml-2'>
-                                Get Free Consolation
-                            </span>
-                        </button>
-                        <button className="btn normal-case btn-outline text-primary hover:bg-indigo-600 rounded-full">
-                            <span className='ml-2'>
-                                Book a Schedule
-                            </span>
-                        </button>
+                        <Link to='/login'>
+                            <button className="btn normal-case text-white hover:bg-indigo-600 bg-indigo-600 rounded-full">
+                                <span className='ml-2'>
+                                    Get Free Consolation
+                                </span>
+                            </button>
+                        </Link>
+
+                        <Link to='/services'>
+                            <button className="btn normal-case btn-outline text-primary hover:bg-indigo-600 rounded-full">
+                                <span className='ml-2'>
+                                    Book a Schedule
+                                </span>
+                            </button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
