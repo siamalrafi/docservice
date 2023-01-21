@@ -11,12 +11,12 @@ const Navbar = () => {
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/services'>Services</Link></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
 
         {
             user?.email ?
                 <>
                     <li><Link to='/dashboard'>Dashboard</Link></li>
-                    <li><Link to='/blogs'>Blogs</Link></li>
 
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

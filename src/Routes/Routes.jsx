@@ -1,7 +1,6 @@
 import Home from "../Pages/Home/Home";
-// import ErrorPage from "../Pages/Extra/ErrorPage/ErrorPage";
-
 import Blog from '../Pages/Extra/Blog/Blog';
+import SingleBlog from '../Pages/Extra/Blog/SingleBlog';
 import PrivateRoutes from './PrivateRoutes';
 import About from "../Pages/Extra/About/About";
 import Login from "../Pages/Auth/Login/Login";
@@ -46,6 +45,12 @@ const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blog></Blog>
+            },
+            {
+                path: '/blogs/:id',
+                element: <SingleBlog></SingleBlog>,
+                loader: async ({ params }) => fetch(`http://localhost:3000/blogs/${params.id}`),
+
             },
             {
                 path: '/signup',

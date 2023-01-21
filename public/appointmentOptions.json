@@ -3,7 +3,8 @@
         "_id": 1,
         "name": "Dr. Elda Mills",
         "treatmentName": "Medical",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/xJBZZnH/download.jpg",
+        "price": "99",
         "slots": [
             "08.00 AM - 08.30 AM",
             "08.30 AM - 09.00 AM",
@@ -27,7 +28,8 @@
         "_id": 2,
         "name": "Dr. Goncalves Silva",
         "treatmentName": "Physiologist",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/3YqjmM9/images-2.jpg",
+        "price": "99",
         "slots": [
             "08.00 AM - 08.30 AM",
             "08.30 AM - 09.00 AM",
@@ -51,7 +53,8 @@
         "_id": 3,
         "name": "Dr. Daniel Castro",
         "treatmentName": "Consultant",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/nDxT0Px/doctor.webp",
+        "price": "99",
         "slots": [
             "08.00 AM - 08.30 AM",
             "08.30 AM - 09.00 AM",
@@ -75,7 +78,8 @@
         "_id": 4,
         "name": "Dr. Paulo Goncalves",
         "treatmentName": "Surgical",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/tJ598zq/images-1.jpg",
+        "price": "99",
         "slots": [
             "08.00 AM - 08.30 AM",
             "08.30 AM - 09.00 AM",
@@ -99,14 +103,16 @@
         "_id": 5,
         "name": "Dr. Carolina Rocha",
         "treatmentName": "Therapist",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/jZhQqzD/doctor2.webp",
+        "price": "99",
         "slots": []
     },
     {
         "_id": 6,
         "name": "Dr. Ethan Mills",
         "treatmentName": "Psychiatrist",
-        "doctorsImg": "https://placeimg.com/192/192/people",
+        "doctorsImg": "https://i.ibb.co/VMZJGC5/doctor1.webp",
+        "price": "99",
         "slots": [
             "08.00 AM - 08.30 AM",
             "08.30 AM - 09.00 AM",

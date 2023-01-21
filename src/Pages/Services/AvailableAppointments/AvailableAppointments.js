@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import { computeHeadingLevel } from '@testing-library/react';
 import { format } from 'date-fns';
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Context/UserContext';
@@ -26,6 +27,8 @@ const AvailableAppointments = ({ selectedDate }) => {
         return <Loading></Loading>
     };
 
+    console.log(appointmentOptions);
+
 
     return (
         <div>
@@ -52,12 +55,6 @@ const AvailableAppointments = ({ selectedDate }) => {
                     >
                     </BookingModal>
                 }
-
-
-
-
-
-
 
             </section >
         </div >

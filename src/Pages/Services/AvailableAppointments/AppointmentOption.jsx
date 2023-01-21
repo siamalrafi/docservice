@@ -1,14 +1,14 @@
 import React from 'react';
 
 const AppointmentOption = ({ appointmentOption, setTreatment }) => {
-    const { name, price, slots } = appointmentOption;
+    const { name, price, doctorsImg, slots } = appointmentOption;
 
     return (
         <>
             <div className="card shadow-xl  ">
                 <div className="avatar justify-center">
-                    <div className="w-30 mask mask-hexagon">
-                        <img src="https://placeimg.com/192/192/people" alt='doctors-img' />
+                    <div className="w-28 mask mask-hexagon">
+                        <img src={doctorsImg} alt='doctors-img' />
                     </div>
                 </div>
 

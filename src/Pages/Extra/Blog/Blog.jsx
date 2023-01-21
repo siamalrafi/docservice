@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
+    const [blogs, setBlogs] = useState([]);
+
+    useEffect(() => {
+        fetch('/blog.json')
+            .then(res => res.json())
+            .then(blogs => setBlogs(blogs))
+    }, [])
+
+
+
     return (
         <div>
             <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-5">
@@ -48,19 +59,24 @@ const Blog = () => {
 
 
                 <div className="grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3">
-                    <div className="p-5 duration-300 transform bg-white border-2 border-purple-400 rounded shadow-sm border-deep-purple-accent-100 hover:-translate-y-2">
-                        <div className="flex items-center mb-2">
-                            <p className="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-deep-purple-accent-400">
-                                1
-                            </p>
-                            <p className="text-lg font-bold leading-5">Fill her up</p>
-                        </div>
-                        <p className="text-sm text-gray-900">
-                            Bro ipsum dolor sit amet gaper backside single track, manny Bike
-                            epic clipless.
-                        </p>
-                    </div>
-                 
+                    {
+                        blogs?.map((blog, i) => <Link to={`/blogs/${blog.title.slice(0, 8)}`} key={i}>
+                            <div className="p-5 duration-300 transform bg-white border-2 border-purple-400 rounded shadow-sm border-deep-purple-accent-100 hover:-translate-y-2">
+                                <div className="flex items-center mb-2">
+                                    <p className="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-deep-purple-accent-400">
+                                        1
+                                    </p>
+                                    <p className="text-lg font-bold leading-5">{blog?.title}</p>
+                                </div>
+                                <p className="text-sm text-gray-900">
+                                    {blog?.discription.slice(0, 150)}....
+                                </p>
+                            </div>
+                        </Link>)
+                    }
+
+
+
                 </div>
             </div>
         </div>
