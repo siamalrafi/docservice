@@ -7,7 +7,7 @@ import { AuthContext } from '../../../Context/UserContext';
 const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
     const { user } = useContext(AuthContext);
 
-    const { name, slots } = treatment;
+    const { name, price, slots } = treatment;
 
     const date = format(selectedDate, 'PP');
 
@@ -37,6 +37,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
             slot,
             email,
             phone,
+            price,
         };
 
 

@@ -13,6 +13,7 @@ import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AdminRoute from "./AdminRoute";
 import AddDoctor from "../Pages/Dashboard/AddDoctor/AddDoctor";
 import ManageDoctors from '../Pages/Dashboard/ManageDoctors/ManageDoctors'
+import Payment from "../Pages/Dashboard/Payment/Payment";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../Layout/Main/Main");
@@ -73,6 +74,11 @@ const router = createBrowserRouter([
                     {
                         path: '/dashboard/manageDoctors',
                         element: <AdminRoute><ManageDoctors></ManageDoctors>
+                        </AdminRoute>
+                    },
+                    {
+                        path: '/dashboard/payment/:id',
+                        element: <AdminRoute><Payment></Payment>
                         </AdminRoute>
                     }
                 ]
