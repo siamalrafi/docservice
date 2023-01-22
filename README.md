@@ -26,7 +26,7 @@ This project was very interesting for me because in this project I can implement
 ## Features
 
 - Light/dark mode toggle
-- Dynamic route facility.
+- Dynamic route facility, good UI/UX experience .
 - Appointments booking facilities.
 - Attractive dashboard that allows you to manage your appointments.
 - Appointments fee payment system with stripe and cancellation.
@@ -34,9 +34,11 @@ This project was very interesting for me because in this project I can implement
 
 
 
-#### Question 1
+#### Is it team project?
 
-Answer 1
+```bash
+  No. It's a single project. I built this website.
+```
 
 #### Question 2
 
