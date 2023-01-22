@@ -85,15 +85,6 @@ const Testimonial = () => {
         },
     ];
 
-    const settings = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 3,
-        speed: 500
-    };
-
 
     // This is for responsive Carousel
     const responsive = {
@@ -129,17 +120,6 @@ const Testimonial = () => {
                     <img className='w-20 lg:w-48' src={quote} alt="" />
                 </figure>
             </div>
-
-            {/* <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
-                {
-                    reviews.map(review => <Review
-                        key={review._id}
-                        review={review}
-                    >
-                    </Review>)
-                }
-            </div> */}
-
 
             <Carousel responsive={responsive}>
 
