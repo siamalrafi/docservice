@@ -59,23 +59,25 @@ const Navbar = () => {
         </div>
     </React.Fragment >;
 
-
     return (
         <div>
             <div className="navbar font-semibold bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-500 flex justify-between">
                 <div className="flex-1">
-                  
+
                     {/* Dashboard Icon */}
                     <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
                         <FontAwesomeIcon title='OpenDashboard' className='text-3xl' icon={faDashboard}></FontAwesomeIcon>
                     </label>
-                    <a href='/' className="btn btn-ghost text-xl font-bold uppercase">DocService</a>
+                    <Link to='/' className="btn btn-ghost text-xl normal-case">DocService</Link>
+
                 </div>
 
                 <div className="flex-none">
-                    <ul className=" navbar-center hidden lg:flex menu menu-horizontal p-0">
-                        {manuItems}
-                    </ul>
+                    <div className="navbar-center hidden lg:flex">
+                        <ul className="menu menu-horizontal p-0">
+                            {manuItems}
+                        </ul>
+                    </div>
 
                     <div className="dropdown dropdown-end btn-ghost lg:hidden">
                         <button className="btn btn-square btn-ghost">
@@ -86,10 +88,6 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-
-
-
-
 
             </div>
         </div>

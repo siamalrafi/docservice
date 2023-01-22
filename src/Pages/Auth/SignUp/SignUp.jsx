@@ -105,7 +105,7 @@ const SignUp = () => {
 
 
     return (
-        <div className="mx-auto max-w-6xl px-12">
+        <div className="mx-auto max-w-6xl p-8">
             <div className="flex flex-col md:flex-row justify-center">
                 <div className="md:w-1/2 max-w-md flex flex-col justify-center">
                     <div className="md:text-4xl text-xl font-black uppercase">Sign Up </div>
