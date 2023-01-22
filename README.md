@@ -7,9 +7,9 @@
 ## Tech Stack
 
 
-**Client:** React, TailwindCSS, Daisy Ui, Firebase, NPM,
+**Client:** React,react-router-dom, TailwindCSS, Daisy Ui, Firebase,jwt, NPM,
 
-**Server:** Node, Express,MongoDb,
+**Server:** Node, Express and MongoDb,
 
 
 * Website Live Link: https://docservice-1932a.web.app/
