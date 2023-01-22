@@ -22,7 +22,6 @@ const AllUsers = () => {
     });
 
 
-
     const handleMakeAdmin = (id) => {
         fetch(`https://doc-service-server-mocha.vercel.app/users/admin/${id}`, {
             method: 'PUT',
@@ -39,7 +38,6 @@ const AllUsers = () => {
                 }
             })
     };
-
 
 
     const handleDeleteBooking = user => {

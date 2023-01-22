@@ -35,7 +35,6 @@ const DashboardLayout = () => {
                             </>
                         }
 
-
                         {
                             isAdmin && <>
                                 <li><Link className='text-xl mt-3 text-black border-2 text-center  border-black '
@@ -63,12 +62,7 @@ const DashboardLayout = () => {
                             </>
                         }
 
-
-
-
-
                     </ul>
-
                 </div>
             </div>
         </div >

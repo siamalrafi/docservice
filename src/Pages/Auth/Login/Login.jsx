@@ -66,7 +66,7 @@ const Login = () => {
                         </p>
                     </div>
 
-                    <div className="md:w-1/2 flex justify-start mt-5 md:justify-end w-full md:w-1/2 ">
+                    <div className="md:w-1/2 flex justify-start mt-5 md:justify-end w-full">
                         <div className="shadow-md flex-auto max-w-sm px-10 py-5">
 
                             <form onSubmit={handleLogin}>
