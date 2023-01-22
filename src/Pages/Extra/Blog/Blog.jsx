@@ -82,13 +82,11 @@ const Blog = () => {
                                     <p className="text-lg font-bold leading-5">{blog?.title}</p>
                                 </div>
                                 <p className="text-sm text-gray-900">
-                                    {blog?.discription.slice(0, 150)}....
+                                    {blog?.discription}....
                                 </p>
                             </div>
                         </Link>)
                     }
-
-
 
                 </div>
             </div>

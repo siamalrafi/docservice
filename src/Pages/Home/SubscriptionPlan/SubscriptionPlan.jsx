@@ -3,7 +3,7 @@ import React from 'react';
 const SubscriptionPlan = () => {
     return (
         <div>
-            <section className="py-6 bg-gradient-to-r from-indigo-400  to-pink-400 dark:text-gray-300">
+            <section className="py-6 bg-gradient-to-r from-indigo-300  to-pink-500">
                 <div className="container p-4 mx-auto sm:p-10">
                     <div className="mb-12 space-y-4 text-center">
                         <h1 className="text-4xl font-bold leading-tight  text-black">DocService Health Care & Protection Plans
@@ -25,7 +25,7 @@ const SubscriptionPlan = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
-                                <ul className="self-stretch flex-1 space-y-2">
+                                <ul className="self-stretch text-white flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -45,7 +45,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">Subscribe Now</button>
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@ const SubscriptionPlan = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
-                                <ul className="self-stretch flex-1 space-y-2">
+                                <ul className="self-stretch  text-white flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -80,7 +80,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">Subscribe Now</button>
                             </div>
                         </div>
 
@@ -97,7 +97,7 @@ const SubscriptionPlan = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
-                                <ul className="self-stretch flex-1 space-y-2">
+                                <ul className="self-stretch text-white flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
@@ -117,7 +117,7 @@ const SubscriptionPlan = () => {
                                         <span>Lumet consectetur adipisicing</span>
                                     </li>
                                 </ul>
-                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 dark:bg-violet-400 dark:text-gray-900">Subscribe Now</button>
+                                <button className="px-8 py-3 mt-6 text-lg font-semibold rounded sm:mt-12 bg-gradient-to-r from-indigo-200 via-red-200 to-yellow-100">Subscribe Now</button>
                             </div>
                         </div>
                     </div>

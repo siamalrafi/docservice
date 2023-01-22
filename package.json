@@ -24,6 +24,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
     "react-toastify": "^9.1.1",
+    "react-toggle-dark-mode": "^1.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
