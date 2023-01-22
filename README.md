@@ -1,4 +1,4 @@
-# Project Title ==> DocService
+# Project Title  DocService
 
 
 ![App Screenshot](https://i.ibb.co/HKthxcz/home1.png)
@@ -13,7 +13,7 @@
 **Server:** Node, Express and MongoDb,
 
 
-* Website Live 🔗 Links https://docservice-1932a.web.app/
+* Website live 🔗 Links https://docservice-1932a.web.app/
 
 * Website Server 🔗 Links https://doc-service-server-mocha.vercel.app/
 
