@@ -29,7 +29,6 @@ const Banner = () => {
                                 </span>
                             </button>
                         </Link>
-
                     </div>
                 </div>
             </div>
