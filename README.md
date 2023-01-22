@@ -10,7 +10,7 @@
 
 **Client:** React, React-router-dom, React-hook-form, React-icons, TailwindCSS, Daisy Ui, Firebase,jwt, NPM,
 
-**Server:** Node, Express and MongoDb,
+**Server:** Node.js, Express.js and MongoDb,
 
 
 * Website live 🔗 Links https://docservice-1932a.web.app/
@@ -20,8 +20,7 @@
 
 ## Lessons Learned
 
-What did you learn while building this project? What challenges did you face and how did you overcome them?
-
+This project was very interesting for me because on this project I can implement my own thinking and creativity. 
 
 
 ## Features
