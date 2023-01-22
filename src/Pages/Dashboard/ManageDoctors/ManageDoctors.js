@@ -31,9 +31,7 @@ const ManageDoctors = () => {
         }
     });
 
-
     const handleDeleteDoctor = doctor => {
-
         fetch(`https://doc-service-server-mocha.vercel.app/doctors/${doctor._id}`, {
             method: 'DELETE',
             headers: {

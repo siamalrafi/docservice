@@ -1,16 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Loading from '../../Shared/LoadingPage/LoadingPage';
 
 const Blog = () => {
-    // const [blogs, setBlogs] = useState([]);
-
-    // useEffect(() => {
-    //     fetch('https://doc-service-server-mocha.vercel.app/blogs')
-    //         .then(res => res.json())
-    //         .then(blogs => setBlogs(blogs))
-    // }, []);
 
     const { data: blogs = [], isLoading, refetch } = useQuery({
         queryKey: ['users'],
@@ -82,7 +75,7 @@ const Blog = () => {
                                     <p className="text-lg font-bold leading-5">{blog?.title}</p>
                                 </div>
                                 <p className="text-sm text-gray-900">
-                                    {blog?.discription.slice(12,80)}....
+                                    {blog?.discription.slice(12, 80)}....
                                 </p>
                             </div>
                         </Link>)

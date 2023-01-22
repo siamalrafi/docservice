@@ -54,13 +54,11 @@ const AllUsers = () => {
                     toast.success(`User deleted successfully`)
                 }
             });
-    }
+    };
 
     if (isLoading) {
         return <Loading></Loading>
-    }
-
-
+    };
 
     return (
         <div>

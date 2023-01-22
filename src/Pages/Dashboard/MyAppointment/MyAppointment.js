@@ -14,9 +14,7 @@ const MyAppointment = () => {
         setDeletingBooking(null);
     }
 
-
     const url = `https://doc-service-server-mocha.vercel.app/bookings?email=${user?.email}`;
-
     const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
         queryFn: async () => {
@@ -31,7 +29,6 @@ const MyAppointment = () => {
     });
 
     // console.log(bookings);
-
     const handleDeleteBooking = booking => {
         fetch(`https://doc-service-server-mocha.vercel.app/booking/${booking._id}`, {
             method: 'DELETE',
@@ -51,8 +48,6 @@ const MyAppointment = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
-
-
 
 
     return (

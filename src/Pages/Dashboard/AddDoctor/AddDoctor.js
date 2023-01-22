@@ -7,9 +7,6 @@ import Loading from '../../Shared/LoadingPage/LoadingPage';
 
 const AddDoctor = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
-
-
     const navigate = useNavigate();
 
     const { data: specialties, isLoading } = useQuery({
@@ -99,7 +96,6 @@ const AddDoctor = () => {
                             >{specialty.treatmentName}</option>)
                         }
 
-
                     </select>
                 </div>
                 <div className="form-control w-full max-w-xs">
@@ -114,13 +110,5 @@ const AddDoctor = () => {
         </div>
     );
 };
-
-
-/**
- * Three places to store images
- * 1. Third party image hosting server 
- * 2. File system of your server
- * 3. mongodb (database)
-*/
 
 export default AddDoctor;

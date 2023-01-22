@@ -15,7 +15,6 @@ const About = () => {
                 </div>
             </div>
 
-
             <p className='my-6 px-10'>DocService is an online medical service targeting emerging markets that are rapidly digitising. Our mission is to improve the health and wellbeing of the populations we serve. We have developed accessible and affordable telehealth services that aims to support the public health system, research and clinical trials. </p>
 
             <p className='px-10'>DocService offers on-demand GP and specialist consultations with verified and certified doctors, online prescriptions, medicine delivery, pathology/ diagnostics tests, all while building valuable Electronic Health Records</p>
