@@ -3,6 +3,9 @@
 
 ## DocService
 
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
 
 ## Tech Stack
 
@@ -45,6 +48,8 @@ Answer 2
 ## 🚀 About Me
 I'm a full stack developer...
 
+## 🛠 Skills
+Javascript, HTML, CSS...
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
