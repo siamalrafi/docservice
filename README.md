@@ -20,15 +20,18 @@
 
 ## Lessons Learned
 
-This project was very interesting for me because in this project I can implement my own thinking and creativity. I always try to learn something new and to explore extra features that I don't know. In this project, I use react-hook-form, react-day-picker, react-multi-carousel etc. Which is very interesting and attractive. I used JWT(JSON Web Token) in this project. Which is more stale security for my website.
+This project was very interesting for me because in this project I can implement my own thinking and creativity. I always try to learn something new and to explore extra features that I don't know. In this project, I use Stripe payment system, react-hook-form, react-day-picker, react-multi-carousel etc. Which is very interesting and attractive. I used JWT(JSON Web Token) in this project. Which is more stale security for my website.
 
 
 ## Features
 
 - Light/dark mode toggle
-- Live previews
-- Fullscreen mode
-- Cross platform
+- Dynamic route facility.
+- Appointments booking facilities.
+- Attractive dashboard that allows you to manage your appointments.
+- Appointments fee payment system with stripe and cancellation.
+- Response web application which allows you to use all cross platforms.
+
 
 
 #### Question 1
