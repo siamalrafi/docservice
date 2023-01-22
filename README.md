@@ -12,9 +12,9 @@
 **Server:** Node, Express and MongoDb,
 
 
-* Website Live Link: https://docservice-1932a.web.app/
+* Website Live 🔗 Links https://docservice-1932a.web.app/
 
-* Website Server Link: https://doc-service-server-mocha.vercel.app/
+* Website Server 🔗 Links https://doc-service-server-mocha.vercel.app/
 
 
 ## Lessons Learned
@@ -38,4 +38,23 @@ Answer 1
 #### Question 2
 
 Answer 2
+
+
+## 🚀 About Me
+I'm a full stack developer...
+
+# Project Title
+
+A brief description of what this project does and who it's for
+
+
+## 🚀 About Me
+I'm a full stack developer...
+
+
+## 🔗 Links
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+
+
 
