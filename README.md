@@ -40,12 +40,6 @@ Answer 1
 Answer 2
 
 
-## 🚀 About Me
-I'm a full stack developer...
-
-# Project Title
-
-A brief description of what this project does and who it's for
 
 
 ## 🚀 About Me
