@@ -4,8 +4,6 @@ import { useLoaderData } from 'react-router-dom';
 const SingleBlog = () => {
     const blog = useLoaderData([]);
     const { title, discription } = blog;
-    console.log(discription)
-
 
     return (
         <div>

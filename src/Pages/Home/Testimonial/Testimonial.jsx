@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from 'react-slick';
 import quote from '../../../assets/icons/quote.svg';
 import people1 from '../../../assets/images/people1.png';
 import people2 from '../../../assets/images/people2.png';

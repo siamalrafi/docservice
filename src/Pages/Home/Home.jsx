@@ -25,7 +25,6 @@ const Home = () => {
             <Testimonial></Testimonial>
             <SubscriptionPlan></SubscriptionPlan>
             <Contact></Contact> 
-
         </div>
     );
 };

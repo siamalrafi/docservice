@@ -5,7 +5,6 @@ import doctor from '../../../assets/images/doctor.png';
 const MakeAppointment = () => {
     return (
         <div>
-
             <section className='mt-16 bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-500'>
                 <div className="hero">
                     <div className="hero-content flex-col lg:flex-row">

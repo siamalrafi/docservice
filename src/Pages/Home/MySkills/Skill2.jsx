@@ -10,7 +10,6 @@ const Skill2 = ({ mySkill }) => {
                     <h1 className='text-black font-semibold'>{name}</h1>
                     <p>{institute}</p>
                     <p className='text-gray-900'>{duration}</p>
-
                 </div>
                 <div className="avatar">
                     <div className="w-24 rounded  ">

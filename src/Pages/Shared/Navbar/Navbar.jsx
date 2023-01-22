@@ -1,6 +1,6 @@
 import { faDashboard, faGear, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
@@ -13,11 +13,7 @@ const Navbar = () => {
         setDarkMode(checked);
     };
 
-
-
-
     const manuItems = <React.Fragment>
-        {/* <li><Link to='/'>Home</Link></li> */}
         <DarkModeSwitch
             style={{ marginBottom: '0px' }}
             checked={isDarkMode}
@@ -99,7 +95,7 @@ const Navbar = () => {
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                         </label>
-                        <ul tabIndex={0} className=" bg-base-100 dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className=" bg-base-100 dropdown-content menu p-2 shadow rounded-box w-52">
                             {manuItems}
                         </ul>
                     </div>

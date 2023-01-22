@@ -1,13 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
-import { computeHeadingLevel } from '@testing-library/react';
 import { format } from 'date-fns';
-import React, { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../../Context/UserContext';
+import React, { useState } from 'react';
 import Loading from '../../Shared/LoadingPage/LoadingPage';
 import AppointmentOption from '../AvailableAppointments/AppointmentOption'
 import BookingModal from './BookingModal';
-
-
 
 
 const AvailableAppointments = ({ selectedDate }) => {

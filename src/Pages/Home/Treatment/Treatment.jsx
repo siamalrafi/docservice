@@ -18,9 +18,7 @@ const Treatment = () => {
                     </div>
                 </div>
 
-
                 <div>
-
                     <div tabIndex={0} className="collapse my-5 collapse-plus border border-indigo-500 rounded-box">
                         <div className="collapse-title text-xl font-medium">
                             What do we treat?
@@ -60,12 +58,8 @@ const Treatment = () => {
                                 Doctors are available according to their time availability. Our platform is available 24/7. Any doctor can come online at any time if they want.</p>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
-
         </div>
     );
 };

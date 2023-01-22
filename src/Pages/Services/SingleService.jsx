@@ -23,8 +23,6 @@ const SingleService = () => {
                                 onSelect={setSelectedDate} />
                             <p>you selected {format(selectedDate, 'PP')}</p>
 
-
-
                         </div>
                     </div>
                 </div>
