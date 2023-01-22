@@ -42,7 +42,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
         };
 
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://doc-service-server-mocha.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

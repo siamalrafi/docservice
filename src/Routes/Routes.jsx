@@ -39,7 +39,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/Services/:name',
-                loader: async ({ params }) => fetch(`http://localhost:5000/services/${params.name}`),
+                loader: async ({ params }) => fetch(`https://doc-service-server-mocha.vercel.app/services/${params.name}`),
                 element: <SingleService></SingleService>
             },
             {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
             {
                 path: '/blogs/:id',
                 element: <SingleBlog></SingleBlog>,
-                loader: async ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`),
+                loader: async ({ params }) => fetch(`https://doc-service-server-mocha.vercel.app/blogs/${params.id}`),
 
             },
             {
@@ -86,7 +86,7 @@ const router = createBrowserRouter([
                     {
                         path: '/dashboard/payment/:id',
                         element: <Payment></Payment>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/bookings/${params.id}`)
+                        loader: ({ params }) => fetch(`https://doc-service-server-mocha.vercel.app/bookings/${params.id}`)
                     },
                 ]
             },

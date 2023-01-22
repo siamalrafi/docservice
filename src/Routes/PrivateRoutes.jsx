@@ -9,7 +9,7 @@ const PrivateRoutes = ({ children }) => {
 
     if (loading) {
         return <>
-            <div><h1 className='text-2xl text-center'>Please Booking .........</h1></div>
+            <div><h1 className='text-2xl py-16 text-center'>Please Book New</h1></div>
         </>
     }
 

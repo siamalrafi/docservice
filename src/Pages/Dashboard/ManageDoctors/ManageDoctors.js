@@ -17,7 +17,7 @@ const ManageDoctors = () => {
         queryKey: ['doctors'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/doctors', {
+                const res = await fetch('https://doc-service-server-mocha.vercel.app/doctors', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -34,7 +34,7 @@ const ManageDoctors = () => {
 
     const handleDeleteDoctor = doctor => {
 
-        fetch(`http://localhost:5000/doctors/${doctor._id}`, {
+        fetch(`https://doc-service-server-mocha.vercel.app/doctors/${doctor._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -55,14 +55,13 @@ const ManageDoctors = () => {
 
     return (
         <div>
-            <h2 className="text-3xl text-center my-4">Manage Doctors:
-                {doctors?.length}
+            <h2 className="text-3xl text-center my-4">Manage Doctors: 
+                  {doctors?.length}
             </h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Avatar</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -73,7 +72,6 @@ const ManageDoctors = () => {
                     <tbody>
                         {
                             doctors.map((doctor, i) => <tr key={doctor._id}>
-                                <th>{i + 1}</th>
                                 <td><div className="avatar">
                                     <div className="w-24 rounded-full">
                                         <img src={doctor.image} alt="" />

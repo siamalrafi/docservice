@@ -7,7 +7,7 @@ const Blog = () => {
     // const [blogs, setBlogs] = useState([]);
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/blogs')
+    //     fetch('https://doc-service-server-mocha.vercel.app/blogs')
     //         .then(res => res.json())
     //         .then(blogs => setBlogs(blogs))
     // }, []);
@@ -15,7 +15,7 @@ const Blog = () => {
     const { data: blogs = [], isLoading, refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/blogs');
+            const res = await fetch('https://doc-service-server-mocha.vercel.app/blogs');
             const data = await res.json();
             return data;
         }
@@ -82,7 +82,7 @@ const Blog = () => {
                                     <p className="text-lg font-bold leading-5">{blog?.title}</p>
                                 </div>
                                 <p className="text-sm text-gray-900">
-                                    {blog?.discription}....
+                                    {blog?.discription.slice(12,80)}....
                                 </p>
                             </div>
                         </Link>)

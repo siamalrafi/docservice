@@ -11,7 +11,7 @@ const Services = () => {
     const { data: services = [], isLoading, refetch } = useQuery({
         queryKey: ['services'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/services`)
+            const res = await fetch(`https://doc-service-server-mocha.vercel.app/services`)
             const data = await res.json();
             return data
         }

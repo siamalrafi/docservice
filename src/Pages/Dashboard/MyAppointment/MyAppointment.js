@@ -15,7 +15,7 @@ const MyAppointment = () => {
     }
 
 
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `https://doc-service-server-mocha.vercel.app/bookings?email=${user?.email}`;
 
     const { data: bookings = [], isLoading, refetch } = useQuery({
         queryKey: ['bookings', user?.email],
@@ -33,7 +33,7 @@ const MyAppointment = () => {
     // console.log(bookings);
 
     const handleDeleteBooking = booking => {
-        fetch(`http://localhost:5000/booking/${booking._id}`, {
+        fetch(`https://doc-service-server-mocha.vercel.app/booking/${booking._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`

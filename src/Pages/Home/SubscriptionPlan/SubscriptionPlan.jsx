@@ -10,7 +10,7 @@ const SubscriptionPlan = () => {
                         </h1>
                         <p className="px-4 sm:px-8 lg:px-24">Sunt suscipit eaque qui iure unde labore numquam iusto alias explicabo, pariatur ipsam, cupiditate aliquid modi?</p>
                         <div>
-                            <button className="px-4 py-2 font-semibold border rounded-l-lg dark:bg-violet-400 dark:border-violet-400 dark:text-gray-900">Monthly</button>
+                            <button className="px-4 py-2 font-semibold border rounded-l-lg bg-amber-700 text-black">Monthly</button>
                             <button className="px-4 py-2 border rounded-r-lg dark:border-violet-400">Annually</button>
                         </div>
                     </div>
