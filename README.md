@@ -1,8 +1,6 @@
 # Project Title  DocService
 
-
 ![App Screenshot](https://i.ibb.co/HKthxcz/home1.png)
-
 
 
 ## Tech Stack
@@ -32,8 +30,6 @@ This project was very interesting for me because in this project I can implement
 - Appointments fee payment system with stripe and cancellation.
 - Response web application which allows you to use all cross platforms.
 
-
-
 #### Is it team project?
 
 ```bash
@@ -47,7 +43,6 @@ This project was very interesting for me because in this project I can implement
 ```
 
 
-
 ## 🚀 About Me
 Hello! I'm Md Siam Al Rafi a passionate web developer. I am learning full stack developer.
 
@@ -57,6 +52,3 @@ Javascript, HTML, CSS, Bootstrap, TailwindCss, React, Firebase, NodeJS, JWT, Exp
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://siamalrafi.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siamalrafi0//)
-
-
-
