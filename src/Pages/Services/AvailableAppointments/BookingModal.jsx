@@ -95,7 +95,7 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
                                 </>
                                 :
                                 <>
-                                    <Link className='btn btn-accent w-full' to='/login'>Login</Link>
+                                    <Link className='btn btn-secondary w-full' to='/login'>Login</Link>
                                 </>
                         }
                     </form>

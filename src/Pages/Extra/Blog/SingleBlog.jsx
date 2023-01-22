@@ -3,15 +3,16 @@ import { useLoaderData } from 'react-router-dom';
 
 const SingleBlog = () => {
     const blog = useLoaderData([]);
-    console.log(blog.title);
+    const { title, discription } = blog;
+    console.log(discription)
+
+
     return (
         <div>
             <div className="card bg-base-100 ">
                 <div className="card-body">
-                    <h2 className="card-title">Card title!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
-                    {blog}
-
+                    <h2 className="card-title text-2xl font-semibold">{title}!</h2>
+                    <p>{discription}</p>
                 </div>
             </div>
         </div>

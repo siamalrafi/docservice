@@ -9,11 +9,9 @@ const About = () => {
             <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1'>
                 <div className="card  bg-base-100 rounded-md ">
                     <figure><img src={mission} className='rounded-lg image-full' alt="Shoes" /></figure>
-
                 </div>
                 <div className="card  bg-base-100 rounded-md ">
                     <figure><img src={vision} className='rounded-lg' alt="Shoes" /></figure>
-
                 </div>
             </div>
 

@@ -5,6 +5,9 @@ import people1 from '../../../assets/images/people1.png';
 import people2 from '../../../assets/images/people2.png';
 import people3 from '../../../assets/images/people3.png';
 import Review from './Review';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
 
 
 const Testimonial = () => {
@@ -31,7 +34,57 @@ const Testimonial = () => {
             review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
             location: 'California'
         },
-    ]
+        {
+            _id: 1,
+            name: 'Winson Herry',
+            img: people1,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 1,
+            name: 'Winson Herry',
+            img: people1,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 2,
+            name: 'Winson Herry',
+            img: people2,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 3,
+            name: 'Winson Herry',
+            img: people3,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 1,
+            name: 'Winson Herry',
+            img: people1,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 2,
+            name: 'Winson Herry',
+            img: people2,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+        {
+            _id: 3,
+            name: 'Winson Herry',
+            img: people3,
+            review: 'It is a long established fact that by the readable content of a lot layout. The point of using Lorem a more-or-less normal distribu to using Content here, content',
+            location: 'California'
+        },
+    ];
+
     const settings = {
         className: "center",
         centerMode: true,
@@ -40,6 +93,31 @@ const Testimonial = () => {
         slidesToShow: 3,
         speed: 500
     };
+
+
+    // This is for responsive Carousel
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 3
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 2
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+        }
+    };
+
+
+
     return (
         <section className='my-16'>
             <div className='flex justify-between'>
@@ -52,8 +130,7 @@ const Testimonial = () => {
                 </figure>
             </div>
 
-
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            {/* <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     reviews.map(review => <Review
                         key={review._id}
@@ -61,7 +138,34 @@ const Testimonial = () => {
                     >
                     </Review>)
                 }
-            </div>
+            </div> */}
+
+
+            <Carousel responsive={responsive}>
+
+                {
+                    reviews.map(review => <Review
+                        key={review._id}
+                        review={review}
+                    >
+                    </Review>)
+                }
+
+
+            </Carousel>;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         </section >

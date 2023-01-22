@@ -2,6 +2,7 @@ import React from 'react';
 
 const Review = ({ review }) => {
     const { name, img, review: userReview, location } = review;
+
     return (
         <div className="card shadow-xl">
             <div className="card-body">

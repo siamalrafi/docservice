@@ -1,15 +1,29 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Loading from '../../Shared/LoadingPage/LoadingPage';
 
 const Blog = () => {
-    const [blogs, setBlogs] = useState([]);
+    // const [blogs, setBlogs] = useState([]);
 
-    useEffect(() => {
-        fetch('/blog.json')
-            .then(res => res.json())
-            .then(blogs => setBlogs(blogs))
-    }, [])
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/blogs')
+    //         .then(res => res.json())
+    //         .then(blogs => setBlogs(blogs))
+    // }, []);
 
+    const { data: blogs = [], isLoading, refetch } = useQuery({
+        queryKey: ['users'],
+        queryFn: async () => {
+            const res = await fetch('http://localhost:5000/blogs');
+            const data = await res.json();
+            return data;
+        }
+    });
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
 
 
     return (
@@ -57,10 +71,9 @@ const Blog = () => {
 
                 {/* Out all Blog is Here. */}
 
-
                 <div className="grid gap-8 row-gap-5 md:row-gap-8 lg:grid-cols-3">
                     {
-                        blogs?.map((blog, i) => <Link to={`/blogs/${blog.title.slice(0, 8)}`} key={i}>
+                        blogs?.map((blog, i) => <Link to={`/blogs/${blog._id}`} key={i}>
                             <div className="p-5 duration-300 transform bg-white border-2 border-purple-400 rounded shadow-sm border-deep-purple-accent-100 hover:-translate-y-2">
                                 <div className="flex items-center mb-2">
                                     <p className="flex items-center justify-center w-10 h-10 mr-2 text-lg font-bold text-white rounded-full bg-deep-purple-accent-400">
