@@ -20,7 +20,7 @@
 
 ## Lessons Learned
 
-This project was very interesting for me because on this project I can implement my own thinking and creativity. 
+This project was very interesting for me because in this project I can implement my own thinking and creativity. I always try to learn something new and to explore extra features that I don't know. In this project, I use react-hook-form, react-day-picker, react-multi-carousel etc. Which is very interesting and attractive. I used JWT(JSON Web Token) in this project. Which is more stale security for my website.
 
 
 ## Features
