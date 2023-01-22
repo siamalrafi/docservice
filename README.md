@@ -1,10 +1,11 @@
 
 # Project Title
 
-DocService
+## DocService
 
 
 ## Tech Stack
+
 
 **Client:** React, TailwindCSS, Daisy Ui, Firebase, NPM,
 
@@ -14,19 +15,6 @@ DocService
 * Website Live Link: https://docservice-1932a.web.app/
 
 * Website Server Link: https://doc-service-server-mocha.vercel.app/
-
-
-## Run Locally
-
-Clone the project
-
-```bash
-  Website Live Link: https://docservice-1932a.web.app/
-```
-
-```bash
-  Website Server Link: https://doc-service-server-mocha.vercel.app/
-```
 
 
 ## Lessons Learned
