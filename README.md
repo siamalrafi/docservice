@@ -1,6 +1,5 @@
-# Project Title
+# Project Title ## DocService
 
-## DocService
 
 ![App Screenshot](https://i.ibb.co/HKthxcz/home1.png)
 
@@ -9,7 +8,7 @@
 ## Tech Stack
 
 
-**Client:** React,react-router-dom, TailwindCSS, Daisy Ui, Firebase,jwt, NPM,
+**Client:** React, React-router-dom, React-hook-form, React-icons, TailwindCSS, Daisy Ui, Firebase,jwt, NPM,
 
 **Server:** Node, Express and MongoDb,
 
