@@ -16,15 +16,15 @@ const Footer = () => {
                 <div className='footer'>
                     <div>
                         <span className="text-gray-700 text-1xl font-extrabold">Services</span>
-                        <Link className="link link-hover">Medical</Link>
-                        <Link className="link link-hover">Consultant</Link>
-                        <Link className="link link-hover">Marketing</Link>
-                        <Link className="link link-hover">Physiologist</Link>
+                        <Link to={'/services/Medical'} className="link link-hover">Medical</Link>
+                        <Link to={'/services/Consultant'} className="link link-hover">Consultant</Link>
+                        <Link to={'/services/Therapist'} className="link link-hover">Therapist</Link>
+                        <Link to={'/services/Physiologist'} className="link link-hover">Physiologist</Link>
                     </div>
                     <div>
                         <span className=" text-gray-700 text-1xl font-extrabold">Company</span>
-                        <Link className="link link-hover">About us</Link>
-                        <Link className="link link-hover">Contact</Link>
+                        <Link to='/about' className="link link-hover">About us</Link>
+                        <Link to='#contact' className="link link-hover">Contact</Link>
                         <Link className="link link-hover">Jobs</Link>
                         <Link className="link link-hover">Press kit</Link>
                     </div>
