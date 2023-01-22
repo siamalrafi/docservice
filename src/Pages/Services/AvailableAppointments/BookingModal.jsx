@@ -91,11 +91,11 @@ const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
                         {
                             user?.email ?
                                 <>
-                                    <input className='btn btn-accent w-full' type="submit" value="Submit" />
+                                    <input className='btn bg-gradient-to-r from-indigo-600 to-pink-600 w-full' type="submit" value="Submit" />
                                 </>
                                 :
                                 <>
-                                    <Link className='btn btn-secondary w-full' to='/login'>Login</Link>
+                                    <Link className='btn bg-gradient-to-r from-fuchsia-600 to-pink-600 w-full' to='/login'>Login</Link>
                                 </>
                         }
                     </form>

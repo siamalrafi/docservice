@@ -32,7 +32,7 @@ const Login = () => {
                 const user = result.user;
                 setLoginUserEmail(user.email);
                 toast.success(`successfully logged in`);
-                // navigate(from, { replace: true });
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 console.error(error);
@@ -48,7 +48,7 @@ const Login = () => {
                 setLoginUserEmail(user.email);
                 console.log(user);
                 toast.success(`successfully logged in`);
-                // navigate(from, { replace: true });
+                navigate(from, { replace: true });
             })
             .catch((error) => console.error(error.message))
     };

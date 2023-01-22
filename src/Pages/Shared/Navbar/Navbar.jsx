@@ -80,9 +80,9 @@ const Navbar = () => {
                     </div>
 
                     <div className="dropdown dropdown-end btn-ghost lg:hidden">
-                        <button className="btn btn-square btn-ghost">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                        </button>
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-6 h-6 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </label>
                         <ul tabIndex={0} className=" bg-base-100 dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                             {manuItems}
                         </ul>

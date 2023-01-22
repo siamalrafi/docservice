@@ -24,7 +24,7 @@ const SubscriptionPlan = () => {
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
@@ -58,7 +58,7 @@ const SubscriptionPlan = () => {
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
@@ -96,7 +96,7 @@ const SubscriptionPlan = () => {
                                     <span className="text-xl dark:text-gray-400"> /mo</span>
                                 </p>
                             </div>
-                            <div className="flex flex-col items-center justify-center px-2 py-8 dark:bg-gray-800">
+                            <div className="flex flex-col items-center justify-center px-2 py-8 bg-gradient-to-r from-gray-500 via-gray-600 to-blue-800">
                                 <ul className="self-stretch flex-1 space-y-2">
                                     <li className="flex justify-center space-x-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6 dark:text-violet-400">
