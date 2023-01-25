@@ -9,6 +9,32 @@ const auth = getAuth(app);
 
 
 const UserContext = ({ children }) => {
+
+    // const [dark, setDark] = useState(false);
+
+    // const handleDark = () => {
+    //     setDark(!dark);
+    //     localStorage.setItem('dark-mode', !dark)
+    // };
+
+    // useEffect(() => {
+    //     if (!dark) {
+    //         document.querySelector('html').setAttribute('dark-them', 'dark')
+    //     } else {
+    //         document.querySelector('html'.setAttribute('dark-theme', ''))
+    //     }
+    // }, [dark]);
+
+    // useEffect(() => {
+    //     const localDark = JSON.parse(localStorage.getItem('dark-mode'));
+    //     console.log(localDark);
+    //     setDark(localDark)
+    // }, []);
+
+
+
+
+
     const googelProvider = new GoogleAuthProvider();
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true);
@@ -69,7 +95,12 @@ const UserContext = ({ children }) => {
         signIn,
         logOut,
         resetPassword,
-    }
+        // handleDark
+    };
+
+
+
+
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

@@ -1,25 +1,51 @@
 import { faDashboard, faGear, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/UserContext';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import { useEffect } from 'react';
 
 const Navbar = () => {
-    const { user, logOut, } = useContext(AuthContext);
+    const { user, logOut, handleDark } = useContext(AuthContext);
+
+    const [theme, setTheme] = useState('light');
+
 
     const [isDarkMode, setDarkMode] = React.useState(false);
     const toggleDarkMode = (checked) => {
         setDarkMode(checked);
     };
 
+    useEffect(() => {
+        const themes = document.getElementsByTagName('body');
+        themes[0].setAttribute("data-theme", theme)
+        console.log(theme);
+    }, [theme])
+
+
+
     const manuItems = <React.Fragment>
-        <DarkModeSwitch
+
+        {
+            theme === 'light' ?
+                <button onClick={() => setTheme('dark')}>
+                    <img src="https://img.icons8.com/ios-filled/50/null/moon-symbol.png" /></button>
+                :
+                <>
+                    <button onClick={() => setTheme('light')}>
+                        <img src="https://img.icons8.com/ios/50/null/light-on--v1.png" />
+                    </button>
+                </>
+        }
+
+
+        {/* <DarkModeSwitch
             style={{ marginBottom: '0px' }}
             checked={isDarkMode}
             onChange={toggleDarkMode}
             size={50}
-        />
+        /> */}
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/services'>Services</Link></li>
