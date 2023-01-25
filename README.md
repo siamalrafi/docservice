@@ -12,6 +12,7 @@
 
 
 * Website live 🔗 Links https://docservice-1932a.web.app/
+* Website live 🔗 Links https://docservice.netlify.app/
 
 * Website Server 🔗 Links https://doc-service-server-mocha.vercel.app/
 
