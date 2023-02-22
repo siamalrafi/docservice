@@ -4,6 +4,8 @@
 
 
 ## Tech Stack
+## Tech Stack
+## Tech Stack
 
 
 **Client:** React, React-router-dom, React-hook-form, React-icons, TailwindCSS, Daisy Ui, Firebase, jwt, NPM,

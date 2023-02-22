@@ -29,7 +29,7 @@ const Navbar = () => {
 
         {
             theme === 'light' ?
-                <button onClick={() => setTheme('dark')}>
+                <button onClick={() => setTheme('black')}>
                     <img src="https://img.icons8.com/ios-filled/50/null/moon-symbol.png" /></button>
                 :
                 <>
