@@ -46,11 +46,11 @@ This project was very interesting for me because in this project I can implement
 
 
 ## 🚀 About Me
-Hello! I'm Md Siam Al Rafi a passionate web developer. I am learning full stack developer.
+Hello! I'm Siam Al Rafi a passionate web developer. I am learning full stack developer.
 
 ## 🛠 Skills
 Javascript, HTML, CSS, Bootstrap, TailwindCss, React, Firebase, NodeJS, JWT, Express.js and MongoDB.
 
 ## 🔗 Links
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://siamalrafi.netlify.app/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siamalrafi0//)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/siamalrafi100)
